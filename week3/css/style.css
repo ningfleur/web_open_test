@@ -1,13 +1,13 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  /* outline: 1px solid lightgreen; */
+  outline: 1px solid lightgreen;
 }
 
 body {
   font-family: 'Roboto', 'Noto Sans', sans-serif;
 }
 
-body a {
+a {
   color: #ffff;
   text-decoration: none;
   /* display: block; */
@@ -31,7 +31,7 @@ body p {
   text-align: center;
 }
 
-.logo {
+.logo a{
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -41,29 +41,29 @@ body p {
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.logo a {
   display: block;
-  height: 100%;
 }
-
 .menu {
   display: flex;
   align-items: center;
 }
 
-.menu li {
-  margin-left: 64px;
-  height: 44px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+.menu ul {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
 .menu li a {
   color: #ffffff;
   font-size: 20px;
   line-height: 28px;
+  margin-left: 64px;
+  /* padding-top: 8px;
+  padding-bottom: 8px; */
+  display: block
+}
+
+.menu li a:hover {  
+  color: #650300;
 }
 
 @media (max-width:992px) {
@@ -125,6 +125,10 @@ body p {
   padding-top: 13px;
   padding-bottom: 13px;
   display: block;
+}
+
+.tab li a:hover {
+  background-color: #AA0601;
 }
 
 .search {
@@ -372,9 +376,6 @@ body p {
 /*--------footer------- */
 .footer {
   background-color: #AA0601;
-  margin-top: 156px;
-  margin-right: 0;
-  margin-left: 0;
 }
 
 .footer_inner {
@@ -398,19 +399,26 @@ body p {
   font-size: 16px;
   line-height: 24px;
   margin-right: 48px;
-  display: inline-block;
+  display: block;
 }
 
-.ft_social  {
+.ft_nav li a:hover {
+  color: #650300;
+}
+
+.ft_social {
   display: flex;
   align-items: center;
+}
+
+.ft_social li {
+  margin-left: 32px;
 }
 
 .ft_social img {
   width: 48px;
   height: auto;
   display: block;
-  margin-left: 32px;
 }
 
 .d-none {
@@ -422,37 +430,31 @@ body p {
   padding-top: 32px;
   padding-bottom: 22px;
 }
+
 .ft_row2 li a {
   font-size: 36px;
   line-height: 54px;  
-  display: inline-block;
-  padding-left: 54px;
+  display: flex;
 }
-.tel {
-  position: relative;
+
+.ft_row2 li a:hover {
+  color: #650300;
 }
-.tel img {
+
+.ft_row2 .tel img {
   width: 38px;
-  height: 38px;
   margin-right: 20px;
-  position: absolute;
-  top: calc(50% - 19px);
-  left: 0;
+  display: block;
 }
-.mail {
-  position: relative;
-}
-.mail img {
-  width: 48px;
-  height: 48px;
-  margin-right: 20px;
-  position: absolute;
-  top: calc(50% - 24px);
-  left: 0;
+
+.ft_row2 .mail img {
+  width: 44px;
+  margin-right: 14px;
+  display: block;
 }
 
 .line {
-    border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 /* ft_row3 */
@@ -526,17 +528,11 @@ body p {
     width: 18px;
     height: 18px;
     margin-right: 15px;
-    position: absolute;
-    top: calc(50% - 7px);
-    left: 0;
   }
   .mail img {
     width: 18px;
     height: auto;
     margin-right: 7px;
-    position: absolute;
-    top: calc(50% - 6px);
-    left: 0;
   }
   .ft_row3 {  
   padding-top: 24px;
