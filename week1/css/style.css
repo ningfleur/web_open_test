@@ -1,0 +1,166 @@
+
+/*------ reset ends------ */
+
+*, *:before, *:after{
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+}
+
+body {
+  font-family: sans-serif, "Roboto", "Noto Sans";
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mb-72 {
+  margin-bottom: 72px;
+}
+
+.h1 {
+  font-size: 80px;
+  line-height: 94px;
+  border-bottom: 2px solid #000;
+  padding-top: 47px;
+}
+
+.profile img {
+  width: 324px;
+  display: block;
+  padding-top: 17px;
+  padding-bottom: 48px;
+}
+
+.h2 {
+  font-size: 32px;
+  line-height: 45px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 16px;
+}
+
+.eng {
+  font-size: 24px;
+  font-weight: 400;
+  color: #A00404;
+  padding-left: 16px;
+}
+
+.white {
+  color: #ffffff;
+}
+
+p {
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+
+.edu li {
+  line-height: 24px;
+  padding: 12px 0;
+}
+
+
+.dark_bg {
+  color: #ffffff;
+  background-color: #415165;
+}
+
+.skill {
+  margin: 0 auto 72px;
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+
+.skill_center {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill h2 {
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 40px;
+}
+
+.skill ul {
+  border-left: 1px solid #ffffff;
+  max-width: 220px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.skill li {
+  line-height: 28px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  font-weight: 100;
+}
+
+.work ul {
+  max-width: 642px;
+}
+
+.work img {
+  width: 90px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.work li {
+  line-height: 34px;
+  padding-bottom: 24px;
+}
+
+.work li:nth-last-child(1) {
+  padding-bottom: 0px;
+}
+
+.work p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 0px;
+}
+
+.footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer h2 {
+  padding-top: 24px;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 32px;
+}
+
+.info li {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 33px;
+  padding-bottom: 16px;
+}
+
+.social li {
+  display: inline-block;
+  margin-bottom: 36px;
+  width: 48px;  
+  margin-right: 24px;
+}
+
+.social li:nth-last-of-type(1){
+  margin-right: 0;
+}
+
+.social img {
+  display: block;
+}
+
+.social li a {
+  display: block;
+}
+
