@@ -21,7 +21,7 @@ body p {
 /* header */
 .header {
   background-color: #AA0601;
-  height: 108px;
+  /* height: 108px; */
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
@@ -31,27 +31,24 @@ body p {
   text-align: center;
 }
 
-.logo a{
+.logo a {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   width: 80px;
-  height: 49px;
+  height: auto;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
   display: block;
-}
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
 
-.menu {
+ul.menu {
   display: flex;
   align-items: center;
-}
-
-.menu ul {
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .menu li a {
@@ -59,8 +56,8 @@ body p {
   font-size: 20px;
   line-height: 28px;
   margin-left: 64px;
-  /* padding-top: 8px;
-  padding-bottom: 8px; */
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: block
 }
 
@@ -77,25 +74,39 @@ body p {
 
 @media (max-width:767px) {
   .header {
-    padding: 0px;
-    height: 138px;
+    padding-left: 0px;
+    padding-right: 0px;
     flex-wrap: wrap;
+    justify-content: center;
   }
-  .logo {
-    width: 48px;
-    height: 30px;
-    margin: 10px auto;
+.logo a {
+  width: 48px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   }
-  .menu {
+  h1.logo {
+    margin-top: 10px;
+    margin-bottom: 10PX;
+  }
+  ul.menu {
     flex-wrap: wrap;
     width: 100%;
   }
   .menu li {
-    margin: 0;
-    height: 44px;
-    width: 50%;
-    border: 1px solid #ffffff;
+  width: 50%;
   }
+  .menu li a {
+  font-size: 20px;
+  line-height: 28px;
+  margin-left: 0px;
+  margin-right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: auto;
+  padding-right: auto;
+  border: 1px solid #ffffff;
+}
 }
 
 
@@ -139,14 +150,13 @@ body p {
   display: block;
 }
 
-
 @media (max-width: 992px) {
   .tab li a {
-  font-size: 16px;
-  line-height: 22px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: block;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: block;
 }
   .tab_inner {
     padding-left: 39px;
@@ -320,7 +330,6 @@ body p {
     padding-right: 15px;
   }
 }
-
 
 /* -------分頁-------- */
 .pagination {
@@ -516,6 +525,12 @@ ul.ft_social {
   display: block;
   margin-left: 62px;
 }
+
+@media (max-width: 1110px) and (min-width: 993px){
+    .footer_inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
 /* footer 平板 */
 @media (max-width: 992px) {
