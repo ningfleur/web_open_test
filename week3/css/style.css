@@ -43,6 +43,7 @@ body p {
   overflow: hidden;
   display: block;
 }
+
 .menu {
   display: flex;
   align-items: center;
@@ -52,6 +53,7 @@ body p {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
 .menu li a {
   color: #ffffff;
   font-size: 20px;
@@ -406,13 +408,18 @@ body p {
   color: #650300;
 }
 
-.ft_social {
+ul.ft_social {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .ft_social li {
   margin-left: 32px;
+}
+.ft_social li img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
 }
 
 .ft_social img {
@@ -431,24 +438,33 @@ body p {
   padding-bottom: 22px;
 }
 
+.ft_row2 li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 .ft_row2 li a {
   font-size: 36px;
-  line-height: 54px;  
-  display: flex;
+  line-height: 54px;
+  padding-left: 0px;
+  margin-left: 0px;
+  display: inline-block;
+  width: 100%;
 }
 
 .ft_row2 li a:hover {
   color: #650300;
 }
 
-.ft_row2 .tel img {
+.ft_row2 img.tel {
   width: 38px;
-  margin-right: 20px;
+  margin-right: 14px;
   display: block;
 }
 
-.ft_row2 .mail img {
-  width: 44px;
+.ft_row2 img.mail {
+  width: 38px;
   margin-right: 14px;
   display: block;
 }
@@ -461,19 +477,32 @@ body p {
 .ft_row3 {  
   padding-top: 40px;
   padding-bottom: 40px;
+  display: flex; 
+  justify-content: start;
+  align-items: center;
 }
+
+.logo_desktop {
+  width: 80px;
+  display: block;
+}
+
+.logo_mobile {
+  display: none;
+} 
 
 .copyright {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 112px;
+  width: 100%;
 }
 
-.copyright p{
+.copyright p {
   color: #ffffff;
   font-size: 16px;
   line-height: 24px;
+  padding-left: 38px;
 }
 
 .policy {
@@ -484,19 +513,8 @@ body p {
 .policy li a {
   font-size: 14px;
   line-height: 24px;
-  display: inline-block;
-  margin-left: 62px;
-}
-
-.logo_desktop {
-  width: 80px;
   display: block;
-  position: relative;
-  top: 24px;
-}
-
-.logo_mobile {
-  display: none;
+  margin-left: 62px;
 }
 
 /* footer 平板 */
@@ -507,36 +525,40 @@ body p {
   .footer_inner {
     padding-left: 39px;
     padding-right: 39px;
-}
+  }
   .ft_riow1 {
   padding-top: 40px;
-}
+  }
+  .ft_nav li a {
+  margin-right: 40px;
+  }
+  .ft_social li {
+    margin-left: 28px;
+  }
   .ft_social img {
-  width: 24px;
-  margin-left: 24px;
-}
+  width: 28px;
+  }
   .ft_row2 {
     padding-top: 24px;
     padding-bottom: 28px;
   }
   .ft_row2 li a {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 30px;
-    padding-left: 28px;
   }
-  .tel img {
+  .ft_row2 img.tel {
     width: 18px;
     height: 18px;
-    margin-right: 15px;
+    margin-right: 10px;
   }
-  .mail img {
+  .ft_row2 img.mail {
     width: 18px;
     height: auto;
-    margin-right: 7px;
+    margin-right: 10px;
   }
   .ft_row3 {  
-  padding-top: 24px;
-  padding-bottom: 40px;
+    padding-top: 24px;
+    padding-bottom: 40px;
   }
 }
 
@@ -550,6 +572,12 @@ body p {
   .ft_row1 {
     display: none;
   }
+  .ft_social li {
+    margin-left: 24px;
+  }
+  .ft_social img {
+  width: 24px;
+  }
   .ft_row2 {
     padding-top: 23px;
     padding-bottom: 24px;
@@ -557,23 +585,16 @@ body p {
   .ft_row2 li a {
     font-size: 16px;
     line-height: 21px;
-    padding-left: 21px;
   }
-  .tel img {
+  .ft_row2 img.tel {
     width: 14px;
     height: 14px;
     margin-right: 7px;
-    position: absolute;
-    top: calc(50% - 7px);
-    left: 0;
   }
-  .mail img {
+  .ft_row2 img.mail {
     width: 16px;
     height: auto;
     margin-right: 7px;
-    position: absolute;
-    top: calc(50% - 6px);
-    left: 0;
   }
   .d-none {
     display: flex;
@@ -589,17 +610,18 @@ body p {
     margin-left: 24px;
   }
   .ft_row3 {  
+    display: block;
     padding-top: 18px;
     padding-bottom: 25px;
   }
   .copyright {
     display: block;
-    padding-left: 0;
   }
   .copyright p{
     color: #ffffff;
     font-size: 14px;
     line-height: 21px;
+    padding-left: 0;
     padding-bottom: 7px;;
   }
   .logo_desktop {
@@ -610,7 +632,7 @@ body p {
     width: 40px;
     position: absolute;
     right: 18px;
-    bottom: 25px;
+    bottom: 21px;
   }
   .policy {
     display: block;
