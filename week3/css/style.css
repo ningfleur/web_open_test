@@ -559,7 +559,7 @@ ul.ft_social {
   }
   .ft_row2 li a {
     font-size: 28px;
-    line-height: 30px;
+    line-height: 36px;
   }
   .ft_row2 img.tel {
     width: 18px;
@@ -598,8 +598,9 @@ ul.ft_social {
     width: 24px;
   }
   .ft_row2 {
-    padding-top: 23px;
+    padding-top: 0px;
     padding-bottom: 24px;
+    margin-top: -24px;
   }
   .ft_row2 li a {
     font-size: 16px;
