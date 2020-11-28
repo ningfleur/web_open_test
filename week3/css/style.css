@@ -383,7 +383,6 @@ ul.menu {
 }
 
 
-
 /*--------footer------- */
 .footer {
   background-color: #AA0601;
@@ -426,6 +425,7 @@ ul.ft_social {
 .ft_social li {
   margin-left: 32px;
 }
+
 .ft_social li img:hover {
   transform: scale(1.2);
   transition: all 0.3s;
@@ -526,14 +526,14 @@ ul.ft_social {
   margin-left: 62px;
 }
 
-@media (max-width: 1110px) and (min-width: 993px){
-    .footer_inner {
+/* @media (max-width: 1110px) and (min-width: 992px){
+    .footer_wrap {
     padding-left: 15px;
     padding-right: 15px;
-  }
+  } */
 
 /* footer 平板 */
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .footer {
     margin-top: 56px;
   }
@@ -542,16 +542,16 @@ ul.ft_social {
     padding-right: 39px;
   }
   .ft_riow1 {
-  padding-top: 40px;
+    padding-top: 48px;
   }
   .ft_nav li a {
-  margin-right: 40px;
+    margin-right: 40px;
   }
   .ft_social li {
     margin-left: 28px;
   }
   .ft_social img {
-  width: 28px;
+    width: 28px;
   }
   .ft_row2 {
     padding-top: 24px;
@@ -578,20 +578,24 @@ ul.ft_social {
 }
 
 /* footer 手機版 */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer_inner {
     padding-left: 18px;
     padding-right: 18px;
     position: relative;
   }
   .ft_row1 {
+    justify-content: flex-end;
+    padding-top: 24px;
+  }
+  .ft_nav {
     display: none;
   }
   .ft_social li {
     margin-left: 24px;
   }
   .ft_social img {
-  width: 24px;
+    width: 24px;
   }
   .ft_row2 {
     padding-top: 23px;
@@ -612,18 +616,22 @@ ul.ft_social {
     margin-right: 7px;
   }
   .d-none {
+    display: none;
+  }
+  /* .d-none {
     display: flex;
     align-items: center;
     position: absolute;
     right: 18px;
     top: 23px;
-  }
-  .d-none img {
+  } */
+  /* .d-none img {
     width: 24px;
     height: auto;
     display: block;
     margin-left: 24px;
-  }
+  } */
+  
   .ft_row3 {  
     display: block;
     padding-top: 18px;
