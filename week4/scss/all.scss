@@ -1,0 +1,659 @@
+@import 'variables';
+@import 'reset';
+@import 'header';
+@import 'footer';
+
+// global setting
+*, *::before, *::after {
+  box-sizing: border-box;
+  // outline: 1px solid lightgreen; 
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
+}
+
+a {
+  color: #ffff;
+  text-decoration: none;
+  /* display: block; */
+}
+
+body p {
+  text-align: justify;
+  font-weight: 400;
+}
+
+// global setting starts
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner_wrap {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.pt-64 {
+  padding-top: 64px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+// global setting ends
+
+
+
+// 首頁
+.banner {
+  width: 100%;
+  height: 840px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4b3f0c5bd9792f8ce30b1238d5bf3ec28fb76ef2/week3/banner.png);
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.banner_wrap {
+  max-width: 1110px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+h2.headline {
+  font-size: 64px;
+  line-height: 90px;
+  color: $red_dark;
+  font-weight: 700;
+  text-align: right;
+}
+
+ .headline span {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 700;
+  color: $red_dark;
+}
+
+// large tablet
+@media (max-width:1110px) {
+.banner_wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
+
+// tablet
+@media (max-width: 768px){
+h2.headline {
+  font-size: 48px;
+  line-height: 67px;
+  }
+.headline span{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  }
+}
+
+@media (max-width:576px) {
+.banner {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4b3f0c5bd9792f8ce30b1238d5bf3ec28fb76ef2/week3/banner-sm.png);
+  background-position: center left;
+  height: 394px;
+  }
+  h2.headline {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .headline span{
+  font-size: 16px;
+  line-height: 30px;
+  }
+}
+
+
+// 品牌特色
+.bg-red-light {
+  background-color: $red_light;
+}
+
+h3.title {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  text-align: center;
+  color: $red_dark;
+  margin-bottom: 60px;
+}
+
+ul.feature_items {
+  display: flex;
+  justify-content: center;
+  margin-top: 63px;
+  align-items: baseline;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ul.feature_items li {
+  width: 25%;
+  margin-right: 38px;
+  margin-left: 38px;
+  text-align: center;
+}
+
+ul.feature_items img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+ul.feature_items h4 {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 700;
+  color: $red_dark;
+  margin-bottom: 4px;
+}
+
+ul.feature_items p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $black;
+  text-align: left;
+}
+
+
+//large-tablet
+@media (max-width:1110px) {
+.inner_wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
+
+//tablet  品牌特色 
+@media (max-width:992px) {
+  h3.title {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+  ul.feature_items {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  ul.feature_items li {
+    width: calc(#{50%} - #{15px});
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  }
+
+// mobile  品牌特色 
+@media (max-width:576px) {
+  ul.feature_items li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+  } 
+  ul.feature_items li:nth-last-of-type(1){
+    margin-bottom: 0px;
+  }
+}
+
+  // 經典系列
+.series_item {
+  margin-bottom: 32px;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.series_photo {
+  display: block;
+  width: 635px;
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.series_photo.photo01 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-1.png");
+}
+
+.series_photo.photo02 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2.png");
+}
+
+.series_photo.photo03 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-3.png");
+}
+
+.series_text {
+  margin-left: 30px;
+}
+
+.series_text:nth-child(2) {
+  margin-right: 30px;
+}
+
+img.icon_red {
+  display: block;
+  width: 48px;
+  height: auto;
+}
+
+img.icon_white {
+  display: none;
+}
+
+img.h-48 {
+  height: 48px;
+  width: auto;
+}
+
+h4.strong_text {
+  font-size: 48px;
+  line-height: 72px;
+  color: $red-primary;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-left: 8px;
+}
+
+.series_item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+// large-tablet 經典系列 
+@media (max-width:1110px) {
+.inner_wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
+
+// tablet 經典系列 
+@media (max-width:992px) {
+  .series_item {
+    margin-bottom: 8px;
+  }
+  .series_text:nth-child(2) {
+    margin-left: 30px;
+  }
+  .series_photo {
+    width: 390px;
+    height: 168px;
+  }
+  h4.strong_text {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  h3.title {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+  img.icon_red {
+    width: 32px;
+    height: auto;
+  }
+  img.h-48 {
+    width: auto;
+    height: 42px;
+  }
+  }
+
+// mobile 經典系列 
+@media (max-width:767px) {
+  .series_photo {
+    width: 100%;
+    height: 134px;
+  }
+  .series_item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .series_text {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .series_text:nth-child(2) {
+    margin-left: 0px;
+  }
+  h3.title {
+    font-size: 20px;
+    line-height: 48px;
+    margin-bottom: 20px;
+  }
+  h4.strong_text {
+    color: #ffffff;
+  }
+  img.icon_red {
+    display: none;
+  }
+  img.icon_white {
+    display: block;
+    width: 32px;
+    height: auto;
+  }
+  img.icon_white.h-48 {
+    width: auto;
+    height: 40px;
+  }
+
+  .pt-mo-32 {
+    padding-bottom: 32px;
+  }
+}
+
+// 聯名
+.codesign {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4b3f0c5bd9792f8ce30b1238d5bf3ec28fb76ef2/week3/bg.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h3.white-text {
+  color: white;
+}
+
+.square_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.square {
+  width: calc(#{50%} - #{15px});
+  height: 472px;
+}
+
+.square01 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4b3f0c5bd9792f8ce30b1238d5bf3ec28fb76ef2/week3/product-8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.square02 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4b3f0c5bd9792f8ce30b1238d5bf3ec28fb76ef2/week3/product-9.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+span.xl {
+  font-size: 72px;
+  line-height: 108px;
+  font-weight: 900;
+  color: $red_primary;
+}
+
+.square a {
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.square a:hover {
+  background: rgba(255, 255, 255, 0.8);
+} 
+
+// tablet 聯名
+@media (max-width: 768px) {
+  .pt-tb-40 {
+    padding-top: 40px;
+    padding-bottom: 40px; 
+  } 
+  .square {
+    width: calc(#{50%} - #{15px});
+    height: 280px;
+  }
+  span.xl {
+    font-size: 32px;
+    line-height: 25px;
+  }
+}
+// mobile 聯名
+@media (max-width: 576px) {
+  .square_wrap {
+    flex-direction: column;
+  }
+  .square {
+    width: 100%;
+    height: 284px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .square:nth-child(1) {
+    margin-bottom: 16px;
+  }
+  .pt-mo-32 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+
+// 顧客推薦  space-between 寬度用計算
+.card_wrap {
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(#{25%} - #{30px});
+  border: 1px solid $grey_light;
+  border-top: 0px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card_text {
+  padding: 14px 16px 15px;
+}
+
+.card_name { 
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.card_quote {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #212529;
+  text-align: left;
+  margin-top: 7px;
+}
+
+.card_update {
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey;
+  margin-top: 10px;
+}
+
+// tablet 顧客推薦
+@media (max-width:992px) {
+  .card {
+   width: calc(#{50%} - #{15px});
+  }
+  .card:nth-of-type(1), 
+  .card:nth-of-type(2){
+    margin-bottom: 32px;
+  }
+
+  .card_wrap {
+    flex-wrap: wrap;
+  }
+  .pt-tb-40 {
+    padding-top: 40px;
+  }
+  .pb-tb-40 {
+    padding-bottom: 40px;
+  }
+}
+
+// mobile 顧客推薦
+@media (max-width:576px) {
+  .card {
+    width: 100%;
+  }
+  .card:nth-of-type(1), 
+  .card:nth-of-type(2),
+  .card:nth-of-type(3){
+    margin-bottom: 16px;
+  }
+  .mo-f-direction-col {
+    flex-direction: column;
+  }
+  .pt-mo-32 {
+    padding-top: 32px;
+  }
+}
+
+// 表單
+.form_inner {
+  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+}
+
+p.form {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: $black;
+}
+
+.form-wrap {
+  margin-top: 20px;
+}
+
+.form-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-frame {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: $red_light;
+  border: 1px solid $grey;
+  margin-bottom: 16px;
+}
+
+.form-frame:nth-of-type(4){
+  height: 136px;
+}
+
+.form-align {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.form-checkbox {
+  color: $red_light;
+  background-color: $red_light;
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+
+button.form-submit {
+  background-color: $red_primary;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 16px 143px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-style: none;
+  margin-top: 42px;
+}
+
+button.form-submit:hover {
+  background-color: $red_dark;
+}
+
+// tablet
+@media (max-width: 768px) {
+  button.form-submit {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 8px 76px;
+  margin-top: 24px;
+}
+.form_inner {
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.mb-tb-40 {
+    margin-bottom: 40px;
+  }
+}
+
+// mobile
+@media (max-width: 576px) {
+  button.form-submit {
+  padding: 8px 54px;
+}
+.form_inner {
+  padding-bottom: 32px;
+}
+.mb-mo-32 {
+  margin-bottom: 32px;
+}
+}

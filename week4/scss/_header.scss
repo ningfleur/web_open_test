@@ -1,0 +1,159 @@
+// header start
+.header {
+  background-color: #AA0601;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 88px;
+  padding-right: 88px;
+  text-align: center;
+}
+
+.logo a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 80px;
+  height: auto;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
+
+ul.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 28px;
+  margin-left: 64px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: block
+}
+
+.menu li a:hover {  
+  color: #650300;
+}
+
+// tablet header
+@media (max-width:992px) {
+  .header {
+    padding-right: 39px;
+    padding-left: 39px;
+  }
+}
+
+@media (max-width:767px) {
+  .header {
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .logo a {
+    width: 48px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  h1.logo {
+    margin-top: 10px;
+    margin-bottom: 10PX;
+  }
+  ul.menu {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .menu li {
+    width: 50%;
+  }
+  .menu li a {
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 0px;
+    margin-right: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: auto;
+    padding-right: auto;
+    border: 1px solid #ffffff;
+  }
+}
+
+/* tab start*/
+.tab {
+  background-color: #650300;
+}
+
+.tab_inner {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab ul {
+  display: flex;
+}
+
+.tab li {
+  margin-right: 48px; 
+}
+
+.tab li a {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 28px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  display: block;
+}
+
+.tab li a:hover {
+  background-color: #AA0601;
+}
+
+.search {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+// tablet
+@media (max-width: 1100px) {
+  .tab_inner{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tab li a {
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: block;
+}
+  .tab_inner {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tab {
+    display: none;
+  }
+}
+

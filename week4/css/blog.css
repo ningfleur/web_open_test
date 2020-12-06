@@ -1,0 +1,227 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* outline: 1px solid lightgreen; */
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
+}
+
+a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+body p {
+  text-align: justify;
+  font-weight: 400;
+}
+
+/*-------- 部落格 --------*/
+.articles {
+  margin-top: 82px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.blog {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.blog img {
+  width: 55%;
+  height: auto;
+  margin-right: 30px;
+  display: block;
+}
+
+.content {
+  width: 45%;
+}
+
+h2.title {
+  font-size: 32px;
+  line-height: 45px;
+  color: #650300;
+  font-weight: 400;
+}
+
+.sutbible {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eng {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7)
+}
+
+.text {
+  font-size: 20px;
+  line-height: 30px;
+  color: #555555;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.desktop_more {
+  font-size: 30px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #650300;
+  display: block;
+  margin-right: 0;
+  text-align: right;
+}
+
+.tablet_more {
+  font-weight: 700;
+  display: none;
+}
+
+/* large tablet */
+@media (max-width: 1110px){
+  .inner_wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* tablet*/
+@media (max-width: 992px) {
+  .articles {
+    margin-top: 40px;
+  }
+
+  .blog {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  .blog img {
+    width: 50.5%;
+  }
+  .content {
+    width: 49.5%;
+  }
+  .tablet_none {
+    display: none;
+  }
+  h2.title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .eng {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .date {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .tablet_more {
+    display: inline-block;
+  }
+  .tablet_more a {
+    color: #555555;
+  }
+  .tablet_more a:hover {
+    color: #650300; 
+  }
+  .desktop_more {
+    display: none;
+  }
+}
+
+/* articles 手機版*/
+@media (max-width:767px) {
+  .articles {
+    display: block;
+  }
+  .blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    display: block;
+    align-items: center;
+  }
+  .blog img {
+    margin-right: 0;
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+  .text {
+    display: none;
+  }
+}
+
+
+
+/* -------分頁-------- */
+.pagination {
+  margin-top: 100px;
+  margin-bottom: 156px;
+}
+.pagination ul {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination_list li a {
+  display: block;
+  color: #555555;
+  font-size: 19px;
+  line-height: 26px;
+  padding: 11px 16px;
+  border-right: 1px solid #555555;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}
+.pagination_list li:first-child a{
+  border-left: 1px solid #555555;
+}
+.pagination_list li:nth-child(3) a{
+  background-color: #000000;
+  color: #ffffff;
+}
+.pagination_list li:last-child a{
+  background-color: #F2F2F2;
+}
+
+@media (max-width:992px) {
+  .pagination {
+  margin-top: 106px;
+  margin-bottom: 106px;
+}
+}
+
+@media (max-width:767px) {
+  .pagination {
+  margin-top: 39px;
+  margin-bottom: 56px;
+}
+.pagination_list li a {
+  font-size: 12px;
+  line-height: 18px;
+  padding: 8px 9px;
+}
+}
