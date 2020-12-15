@@ -1,0 +1,306 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* outline: 1px solid lightgreen;  */
+}
+
+body {
+  font-family: 'lato', 'Noto Sans', sans-serif;
+}
+
+
+/* normalize 是藍色 */
+a {
+  text-decoration: none;
+  color: #121212;
+  cursor: pointer;
+}
+
+a:hover{
+  text-decoration: none;
+  color:#2A8356;
+}
+
+body p {
+  text-align: justify;
+  font-weight: 400;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text_green {
+  color:#2A8356;
+}
+
+.mr-26 {
+  margin-right: 26px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+/* 側邊欄 */
+.sidebar {
+  background-color: #EDF4EE;
+}
+
+ h1.logo {
+  text-align: left;
+  margin-left: 0px;
+  font-size: 36px;
+  padding-left: 32px;
+ }
+
+.logo a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 40px;
+  width: auto;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+ul.menu {
+  margin-top: 42px;
+}
+
+.menu li {
+  margin-bottom: 30px;
+  padding-left: 32px;
+}
+
+.menu li:nth-of-type(5) {
+  border-left: 6px solid #2A8356;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a.active {
+  color: #2A8356;
+}
+
+.sidebar i.material-icons { 
+  font-size: 24px; 
+  color: ＃121212;
+  padding-right: 16px;
+}
+
+.user {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 32px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50%;
+  display: block;
+  margin-right: 16px;
+}
+
+.user li {
+  margin-bottom: 4px;
+}
+
+.user li a.text_light {
+  text-decoration: none;
+  color: #0000009A;
+  font-weight: 100;
+}
+
+.user li.text_md {
+  font-weight: 800;
+}
+
+/* 上方bar */
+.flex-left {
+  display: flex;
+  align-items: center;
+}
+
+.flex-right li a,
+.flex-left li a {
+  display: inline-block;
+}
+
+.main h2 {
+  margin-right: 47px;
+}
+
+/* 表格欄位 */
+.main {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 800;
+}
+
+/* 表格開始 */
+.table {
+  margin-top: 48px;
+  margin-bottom: 0px;
+}
+
+.table thead th {
+  border: 0px;
+  border-bottom: 1px solid #121212;
+  font-weight: 700;
+}
+
+.table td {
+  color: #121212;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid #EDF4EE;
+  vertical-align: middle;
+}
+
+.table td a:hover {
+  color: #2A8356;
+}
+
+tbody > tr:hover {
+  background-color: #EDF4EE;
+}
+
+.table td:nth-of-type(5),
+.table td:nth-of-type(6) {
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+/* 分頁 */
+nav {
+  margin-top: 62px;
+  margin-bottom: 32px;
+}
+
+a.page-link {
+  border: 1px solid #2A8356;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #121212;
+}
+
+.page-link:hover {
+  color: white;
+  background-color: #2A8356;
+  border-color: #2A8356;
+}
+
+.page-item:last-child .page-link{
+  border-radius: 0;
+}
+
+.page-item:first-child .page-link{
+  border-radius: 0;
+}
+
+/* 彈出 */
+/* bs4 預設圓角*/
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+button.close {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  opacity: 1;
+  font-weight: 400; 
+  padding: 4px 6px; 
+}
+
+.card_photo {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/emir.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 141px;
+  height: 141px;
+  display: block;
+  margin-right: 24px;
+}
+
+.card_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.card_info li {
+  padding-bottom: 8px;
+}
+
+.card_info li:nth-of-type(3) {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.verify_group {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+a.verify {
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: #EDF4EE;
+}
+
+i.arrow {
+  font-size: 24px;
+  padding: 4px 6px;
+  color: #2A8356;
+  transition: all .3s ease;
+}
+
+i.arrow:active {
+  transform: rotateX(180deg);
+}
+
+.btn-outline-danger,
+.btn-success {
+  padding: 8px 32px;
+}

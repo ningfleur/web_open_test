@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表單首頁</title>
+  <!-- use material icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="sidebar col-md-3  pt-4">
+        <h1 class="logo"><a href="#">
+            ANSWER</a>
+        </h1>
+        <ul class="menu">
+          <li><a href=""><i class="material-icons">assessment</i>Dashboard</a></li>
+          <li><a href=""><i class="material-icons">question_answer</i>Question</a></li>
+          <li><a href=""><i class="material-icons">assignment</i>Assignment</a></li>
+          <li><a href=""><i class="material-icons">video_library</i>Course</a></li>
+          <li><a class="active" href=""><i class="material-icons">group</i>Admin</a></li>
+          <li><a href=""><i class="material-icons">settings</i>Settings</a></li>
+        </ul>
+        <div class="user">
+          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/andychen.jpeg"
+            alt="admin">
+          <ul>
+            <li class="text_md">Andy Chen</li>
+            <li><a class="text_light" href="mailto:andy0401@mail.com">andy0401@mail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main col-md-9 pt-4">
+        <div class="d-flex space-between">
+          <ul class="d-flex flex-left">
+            <li>
+              <h2>Admin</h2>
+            </li>
+            <li><a href=""><i class="material-icons text_green">add</i></a></li>
+            <li><a href="">Add New Admin</a></li>
+          </ul>
+          <ul class="d-flex flex-right">
+            <li><a href="#"><i class="material-icons mr-26">search</i></a></li>
+            <li><a href="#"><i class="material-icons">notifications_active</i></a></li>
+          </ul>
+        </div>
+        <!--table  -->
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Verified</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td><a data-toggle="modal" data-target="#exampleModalCenter">Emir Wicks</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <!-- Modal start-->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <div class="d-flex">
+                        <div class="card_photo"></div>
+                        <div class="card_group">
+                          <ul class="card_info">
+                            <li>#1</li>
+                            <li>Admin</li>
+                            <li>Emir Wicks</li>
+                            <li>emir.wicks@mail.com</li>
+                          </ul>
+                          <div class="verify_group">
+                            <a type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                              aria-controls="collapseExample" class="verify">Varified</a>
+                            <a type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                              aria-controls="collapseExample">
+                              <i class="material-icons arrow">keyboard_arrow_down
+                              </i>
+                            </a>
+                          </div>
+                          <div class="collapse" id="collapseExample">
+                            <div class="btn_group d-flex mt-32">
+                              <button type="button" class="btn btn-outline-danger mr-26">Deactivate</button>
+                              <button type="button" class="btn btn-success">Edit</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal end-->
+              <tr>
+                <td>#2</td>
+                <td><a>Zaina Goldsmith</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#3</td>
+                <td><a>Mahima Lopez</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td><a>Pharrell Murray</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#5</td>
+                <td><a>Annika Mcbride</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#6</td>
+                <td><a>Fatimah Clark</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td><a>Klaudia Rhodes</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#8</td>
+                <td><a>Tillie Lucero</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+              <tr>
+                <td>#9</td>
+                <td><a>Sabrina Stephenson</a></td>
+                <td><a href="mailto:emir.wicks@mail.com">emir.wicks@mail.com</a></td>
+                <td>Yes</td>
+                <td><i class="material-icons">visibility</i></td>
+                <td><i class="material-icons">create</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&lt;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&gt;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
