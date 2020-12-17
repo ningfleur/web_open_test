@@ -8,6 +8,9 @@ body {
   font-family: 'lato', 'Noto Sans', sans-serif;
 }
 
+ul {
+  list-style-type: list-unstyled; 
+}
 
 /* normalize 是藍色 */
 a {
@@ -55,6 +58,7 @@ body p {
 /* 側邊欄 */
 .sidebar {
   background-color: #EDF4EE;
+  min-height: 100vh;
 }
 
  h1.logo {
@@ -110,7 +114,6 @@ a.active {
 }
 
 .user {
-  display: flex;
   position: absolute;
   bottom: 0;
   margin-bottom: 32px;
@@ -124,18 +127,21 @@ a.active {
   margin-right: 16px;
 }
 
-.user li {
-  margin-bottom: 4px;
+.text_md {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  margin-bottom: 0px;
 }
 
-.user li a.text_light {
+.user .text_light {
   text-decoration: none;
   color: #0000009A;
   font-weight: 100;
 }
 
-.user li.text_md {
-  font-weight: 800;
+a.text_light{
+  display: inline-block;
 }
 
 /* 上方bar */
@@ -295,6 +301,10 @@ i.arrow {
   color: #2A8356;
   transition: all .3s ease;
 }
+
+ [aria-expanded="true"] i.arrow { 
+   transform: rotate(-180deg); 
+  }
 
 i.arrow:active {
   transform: rotateX(180deg);
