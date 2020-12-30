@@ -1,0 +1,106 @@
+
+/* 導覽列*/
+.logo a {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: auto;
+  line-height: 38px;
+  padding: 9px 0px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.menu li {
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  font-size: 20px;
+  line-height: 30px;
+  color: #8D8D8D;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.menu li a:hover {
+  color:#AC8A46;
+}
+
+.nav_mobile {
+  display: none !important;
+}
+
+.ham {
+  margin-left: 18px;
+}
+
+.McButton {
+  text-align: center;
+  position: relative;
+  width: 30px;
+  height: 24px;
+}
+
+b {
+  width: 30px;
+  height: 3px;
+  background-color: #8D8D8D;
+  display: block;
+  position: absolute;
+}
+
+b:nth-child(1) {
+  top: 0;
+}
+
+b:nth-child(2) {
+  top: 50%;
+}
+
+b:nth-child(3) {
+  top: 100%;
+}
+
+ul.menu_mobile {
+  background-color: #707070;
+  width: 100%;
+  text-align: center;
+  z-index: 1001;
+}
+
+.menu_mobile li a {
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.shop_cart {
+  position: relative;
+}
+
+.shop_cart::after {
+  content: '3';
+  width: 16px;
+  height: 13px;
+  background-color: #AC8A46;
+  display: block;
+  position: absolute;
+  color:#fff;
+  border-radius: 7px;
+  font-size: 12px;
+  text-align: center; 
+  line-height: 1;
+  top: 0;
+  left: 15px;
+}

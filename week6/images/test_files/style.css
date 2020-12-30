@@ -1,0 +1,372 @@
+
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* fleur客製化 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  outline: 1px solid lightgreen; 
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif, 'Open Sans';
+}
+
+a {
+ text-decoration: none;
+ cursor: pointer;
+}
+
+a:hover, 
+a:active {
+  text-decoration: none;
+}
+
+.text_white {
+  color: #ffffff;
+}
+
+.text_grey {
+  color: #8D8D8D;
+}
+
+.bg_grey {
+  background-color: #E0E0E0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 100;
+  color: #000000;
+}
+
+.text_lg {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.text_m {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.text_s {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100;
+}
+
+.text_light {
+  font-weight: 100;
+}
+
+.text_semibold {
+  font-weight: 500;
+}
+
+/* 導覽列*/
+.logo a{
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: auto;
+  line-height: 38px;
+  padding: 9px 0px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.menu li {
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  font-size: 20px;
+  line-height: 30px;
+  color: #8D8D8D;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.material-icons {
+  color: #8D8D8D;
+}
+
+.nav_mobile {
+  display: none !important;
+}
+
+.ham {
+  margin-left: 18px;
+}
+
+.McButton {
+  text-align: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+b {
+  width: 30px;
+  height: 2px;
+  background-color: #8D8D8D;
+  display: block;
+  position: absolute;
+}
+
+b:nth-child(1) {
+  top: 0;
+}
+
+b:nth-child(2) {
+  top: 50%;
+}
+
+b:nth-child(3) {
+  top: 100%;
+}
+
+@media (max-width: 576px){
+  .nav_desktop {
+    display: none !important;
+  }
+  .nav_mobile {
+    display: flex !important;
+  }
+}
+
+ul.menu_mobile {
+  background-color: #707070;
+  text-align: center;
+  z-index: 1001;
+}
+
+.menu_mobile li a {
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+
+/* 主圖 */
+.cover {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 870px;
+}
+
+.inner {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+h2.headline {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.intro {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.btn_outline {
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+}
+
+.btn_outline:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+a.btn_rounded  {
+  color: #ffffff;
+  display: block;
+  font-size: 32px;
+  line-height: 1.2;
+  padding: 6px 0px;
+}
+
+a.btn_rounded:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .cover {
+    height: 480px;
+  }
+  h2.headline {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .intro {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  a.btn_rounded {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+}
+
+
+
+/* 產品特色 */
+.feature_text {
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0;
+}
+
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+  width: 100%
+}
+
+a.feature_link {
+  font-size: 16px;
+  line-height: 40px;
+  color: #AC8A46;
+}
+
+.btn_outline_black {
+  border: 2px solid #000000;
+  border-radius: 30px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.btn_outline_black:hover {
+  background-color: #0000000D;
+}
+
+a.btn_rounded_black  {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 18px 53px;
+  color: #000000;
+}
+
+a.btn_rounded_black:hover {
+  color: #000000;
+}
+
+@media (max-width: 1110px) {
+  .feature_text {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .feature_image {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature_text {
+    width: 100%;
+  }
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+/*三欄*/
+.card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.prise {
+  text-decoration: line-through;
+  padding-left: 8px;
+}
+
+.card_content {
+  margin-top: 3px;
+}
+
+/* 一欄 */
+.subscribe {
+  height: 600px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.subscribe_content {
+  padding-top: 160px;
+}
