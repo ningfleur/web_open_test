@@ -1,0 +1,176 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  /* outline: 1px solid lightgreen; */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+
+.text_white {
+  color: #ffffff;
+}
+
+.text_sm {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.text_md {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text_lg {
+  font-size: 64px;
+  line-height: 75px;
+  padding-top: 64px;
+  text-align: center;
+}
+
+.bg_dark {
+  background-color: #000000;
+}
+
+/* ---首圖--- */
+.cover {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week2/banner.png);
+  height: 958px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cover_content {
+  max-width: 304px;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 900;
+  text-align: left;
+}
+
+.tagline {
+  font-size: 24px;
+  line-height: 1.25;
+  line-height: 36px;
+}
+
+/* ------關於----- */
+.portrait {
+  width: 384px;
+  margin: 40px auto 24px;
+}
+
+ul.bio {
+  border-top: 1px solid #000;
+  width: 384px;
+  margin: 24px auto 56px;
+}
+
+.bpoints::before {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #891818;
+  margin-left: -30px;
+  margin-top: 3px;
+}
+
+/* ---品牌--- */
+.gallery {
+  margin: 68px auto 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 104px;
+}
+
+.brandphoto1 {
+  margin: 0 auto 40px; 
+}
+
+/* ---作品--- */
+.cards li {
+  margin: 0 12px;
+  padding-bottom: 56px;
+}
+
+/*---footer--- */
+.contact ul {
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.contact li {
+  font-size: 24px;
+  line-height: 33px;
+  padding-top: 16px;
+}
+
+.contact li a {
+  text-decoration: none;
+  display: block;
+}
+
