@@ -217,7 +217,6 @@ a.btn_rounded:hover {
 a.feature_link {
   font-size: 16px;
   line-height: 40px;
-  color: #AC8A46;
 }
 
 .btn_outline_black {
@@ -231,16 +230,23 @@ a.feature_link {
   background-color: #0000000D;
 }
 
-a.btn_rounded_black  {
+.btn_rounded_black  {
   display: block;
   font-size: 20px;
   line-height: 1.2;
-  padding: 18px 53px;
+  padding: 18px 0px;
   color: #000000;
 }
 
-a.btn_rounded_black:hover {
+.btn_rounded_black:hover {
   color: #000000;
+}
+
+@media (max-width: 1110px) {
+  .btn_rounded_black  {
+    display: block;
+    padding: 20px 0px;
+}
 }
 
 @media (max-width: 768px) {
@@ -250,6 +256,15 @@ a.btn_rounded_black:hover {
     margin-bottom: 32px;
   }
 }
+
+@media (max-width: 576px) {
+    .btn_rounded_black  {
+    display: block;
+    padding: 12px 0px;
+  }
+}
+
+
 
 /*三欄*/
 .card {
