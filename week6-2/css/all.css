@@ -1282,4 +1282,10 @@ a.card_link {
 a.card_link:hover {
   color: #AC8A46;
 }
+
+.photo {
+  width: 100px;
+  height: 30xp;
+  color: #121212;
+}
 /*# sourceMappingURL=all.css.map */
