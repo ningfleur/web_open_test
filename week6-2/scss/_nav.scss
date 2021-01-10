@@ -1,5 +1,25 @@
 
 /* 導覽列*/
+nav.wrap {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  h1.logo {
+  padding-left: 15px;
+  }
+  .navbar-light .navbar-toggler {
+    margin-right: 15px;
+  }
+}
+
+nav.navbar.navbar-expand-lg.navbar-light{
+  padding: 0;
+}
+
+
 .logo a {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
   background-size: contain;
@@ -12,76 +32,6 @@
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
-  display: block;
-}
-
-.menu li {
-  margin-left: 32px;
-  display: flex;
-  align-items: center;
-}
-
-.menu li a {
-  font-size: 20px;
-  line-height: 30px;
-  color: #8D8D8D;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: block;
-}
-
-.menu li a:hover {
-  color:#AC8A46;
-}
-
-.nav_mobile {
-  display: none !important;
-}
-
-.ham {
-  margin-left: 18px;
-}
-
-.McButton {
-  text-align: center;
-  position: relative;
-  width: 30px;
-  height: 24px;
-}
-
-b {
-  width: 30px;
-  height: 3px;
-  background-color: #8D8D8D;
-  display: block;
-  position: absolute;
-}
-
-b:nth-child(1) {
-  top: 0;
-}
-
-b:nth-child(2) {
-  top: 50%;
-}
-
-b:nth-child(3) {
-  top: 100%;
-}
-
-ul.menu_mobile {
-  background-color: #707070;
-  width: 100%;
-  text-align: center;
-  z-index: 1001;
-}
-
-.menu_mobile li a {
-  font-size: 20px;
-  line-height: 30px;
-  color: #FFFFFF;
-  padding-top: 16px;
-  padding-bottom: 16px;
   display: block;
 }
 
@@ -104,3 +54,44 @@ ul.menu_mobile {
   top: 0;
   left: 15px;
 }
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+a.nav-link {
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.navbar-light.navbar-nav.nav-link {
+  color: #8D8D8D;
+}
+
+.navbar-light.navbar-nav.nav-link:hover {
+    color:#AC8A46;
+}
+
+.navbar-light .navbar-toggler {
+  padding: 4px;
+  border: 0px;
+}
+
+.navbar-light .navbar-toggler:focus {
+  border: transparent;
+}
+
+@media (max-width: 768px){
+  .navbar-light.navbar-nav.nav-link {
+    color: #ffffff; 
+  }
+  li.nav-item {
+    background-color: #707070;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
