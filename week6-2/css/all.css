@@ -820,6 +820,96 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  h1.logo {
+    padding-left: 15px;
+  }
+  .navbar-light .navbar-toggler {
+    margin-right: 15px;
+  }
+}
+
+nav.navbar.navbar-expand-lg.navbar-light {
+  padding: 0;
+}
+
+.logo a {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: auto;
+  line-height: 38px;
+  padding: 9px 0px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.shop_cart {
+  position: relative;
+}
+
+.shop_cart::after {
+  content: '3';
+  width: 16px;
+  height: 13px;
+  background-color: #AC8A46;
+  display: block;
+  position: absolute;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  top: 0;
+  left: 15px;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+a.nav-link {
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #8d8d8d;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #AC8A46;
+}
+
+button.navbar-toggler {
+  padding: 4px;
+  border: 0px transparent;
+}
+
+button.navbar-toggler:focus {
+  border: 0px transparent;
+}
+
+@media (max-width: 768px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+  }
+  li.nav-item {
+    background-color: #707070;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
 /* footer */
 footer {
   background-color: #916000;
@@ -1184,11 +1274,5 @@ a.card_link {
 
 a.card_link:hover {
   color: #AC8A46;
-}
-
-.photo {
-  width: 100px;
-  height: 30xp;
-  color: #121212;
 }
 /*# sourceMappingURL=all.css.map */
