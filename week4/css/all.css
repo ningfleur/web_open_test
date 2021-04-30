@@ -726,6 +726,10 @@ ul.feature_items img {
   margin: 0 auto 40px;
 }
 
+ul.feature_items img:hover {
+  transform: translate(0, -10px) ;
+}
+
 ul.feature_items h4 {
   font-size: 24px;
   line-height: 33px;
@@ -799,6 +803,10 @@ ul.feature_items p {
   background-position: center center;
 }
 
+.series_photo:hover {
+  opacity: 0.8;
+}
+
 .series_photo.photo01 {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-1.png");
 }
@@ -842,6 +850,14 @@ h4.strong_text {
   text-transform: uppercase;
   display: inline-block;
   padding-left: 8px;
+}
+
+h4.strong_text a {
+  color: #AA0601;
+}
+
+h4.strong_text a:hover {
+  color: #650300;
 }
 
 .series_item:nth-child(2) {
