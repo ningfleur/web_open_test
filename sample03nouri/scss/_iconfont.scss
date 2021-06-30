@@ -1,0 +1,16 @@
+
+//font awesome
+i.fa-facebook, 
+i.fa-youtube {
+  font-size: 30px;
+  color: $grey-dark;
+  &:hover {
+    color: $grey-light;
+  }
+}
+
+i.fa-comment-dots {
+  font-size: 18px;
+  color: $grey-dark;
+}
+

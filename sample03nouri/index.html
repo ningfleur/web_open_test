@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ad0cbcfefc.js" crossorigin="anonymous"></script>
+  <!-- iconmoon -->
+  <link rel="stylesheet" href="css/iconmoon.css">
+  <!-- bootstrap5 -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>sample03</title>
+  <!-- css -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container px-lg-0">
+        <a class="navbar-logo" href="#"><img src="images/nouri_logo_m.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto my-2 my-lg-0">
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link" href="#">關於</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link" href="#">提案</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link" href="#">探索</a>
+            </li>
+          </ul>
+          <ul class="d-flex mt-2 mt-lg-0">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+              登入</button>
+            <button type="button" class="btn btn-outline ms-1 ms-md-3">
+              註冊</button>
+          </ul>
+          <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 id="staticBackdropLabel">登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="InputAccount" class="form-label">帳號</label>
+                        <input type="account" class="form-control" id="InputAccount">
+                      </div>
+                      <div class="mb-3">
+                        <label for="InputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="InputEmail1">
+                        <div id="emailHelp" class="form-text">忘記密碼？</div>
+                      </div> 
+                      <button type="button" class="btn btn-lg d-block mx-auto mb-3">登入</button>          
+                    </form>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>還沒有帳號？<a class="link_cta" href="#" target="_blank">註冊一個帳號</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 日常果實 -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <span class="decoSquare">日常果實</span>
+      <h1 class="font_xl">因愛料理｜fresh package 產地直送</h1>
+      <div class="row mt-3 pb-5">
+        <div class="col-md-8">
+          <img class="borderRounded_lg" src="images/main.jpg" alt="">
+        </div>
+        <div class="col-md-4">
+          <ul class="mt-3 mt-md-0">
+            <li class="font_xl font_number"><span class="font_sm d-block">目標$600,000</span>$280,047</li>
+            <li class="font_sm progress-bar mt-2"></li>
+          </ul>
+          <ul class="row mt-3">
+            <li class="col-6 font_xl font_number"><span class="font_sm d-block">贊助人數</span>1374 人</li>
+            <li class="col-6 font_xl font_number"><span class="font_sm d-block">募資倒數</span>27 天</li>
+          </ul>
+          <div class="borderL bg-white mt-4">
+            <p class="my-0">專案募資中！<br>
+            在 2021/06/14 23:59 募資結束</p>
+          </div>
+          <ul class="d-flex mt-1">
+            <li class="m-2">
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="認證標章"><image src="images/icon/Medal.svg"></a>
+            </li>
+            <li class="m-2">
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="品質保證"><image src="images/icon/ThumbsUp.svg"></a>
+            </li>
+            <li class="m-2">
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="原生創意"><image src="images/icon/Lightbulb.svg"></a>
+            </li>
+            <li class="m-2"><a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="人氣王"><image src="images/icon/Crown.svg"></a>
+            </li>
+          </ul>
+          <div class="mt-5">
+            <a href="#" target="_blank" class="btn btn-lg d-block">贊助專案</a>
+          </div>
+          <div class="d-flex mt-3">
+            <a href="#" target="_blank" class="btn btn-outline"><i class="fas fa-heart me-1"></i>追蹤專案</a>
+            <a href="#" target="_blank" class="btn btn-outline ms-1 ms-md-3"><i class="fas fa-share-alt me-1"></i>分享</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fleur分類頁籤 -->
+  <div class="container mt-5 px-0 stickyTop">
+    <ul class="nav navTabs">
+      <li>
+        <a class="navLink active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro-tab-pane" type="button" onclick="goToTab1()">專案介紹</a>
+      </li>
+      <li>
+        <a class="navLink" id="QA-tab" data-bs-toggle="tab" data-bs-target="#QA-tab-pane" type="button" onclick="goToTab2()">常見問答</a>
+      </li>
+      <li>
+        <a class="navLink" id="news-tab" data-bs-toggle="tab" data-bs-target="#news-tab-pane" type="button" onclick="goToTab3()">材料組合</a>
+      </li>
+      <li>
+        <a class="navLink" id="message-tab" data-bs-toggle="tab" data-bs-target="#message-tab-pane" type="button" onclick="goToTab4()">留言</a>
+        </li>
+    </ul>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="container">
+    <div class="row">
+      <!-- 左邊欄位 -->
+      <div class="col-12 col-md-8 pe-lg-5 pe-md-3">
+        <div class="tab-content">
+          <!-- Tab01 專案介紹 -->
+          <div class="tab-pane active mt-5 mx-0" id="intro-tab-pane">
+            <div>
+              <img src="images/p1.jpg" alt="" class="mx-0 mb-4"></img>
+              <h3 class="font_lg borderL">有機鮮果魔法箱</h3>
+              <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
+            </div>
+            <div class="mt-8">
+              <img src="images/p2.jpg" alt="" class="mb-4"></img>
+              <h3 class="font_lg borderL">放入果汁機就完成</h3>
+              <p>受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
+            </div>
+            
+          </div>
+
+          <!-- Tab02 常見問答 -->
+          <div class="tab-pane mt-5 mx-0" id="QA-tab-pane">
+            <div class="accordion">
+              <div class="accordion-item mb-3 shadow-sm" id="QA01">
+                <div id="panelsStayOpen-headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse01">
+                    <h2 class="font_sm my-0"><span class="badge bg_primary_darker me-2">Q1</span>請問網路商店所有產品可宅配嗎</h2>
+                  </button>
+                </div>
+                <div id="collapse01" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <p class="font_sm text_tint my-0">除了「直販日」僅提供店取外；「週週安心」系列產品售價皆含運，需單獨下單；「店舖嚴選」系列產品，運費為100元/箱。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item mb-3 shadow-sm" id="QA02">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse02">
+                    <h2 class="font_sm my-0"><span class="badge bg_primary_darker me-2">Q2</span>為什麼nouri的蔬果食材可以很漂亮?</h2>
+                  </button>
+                  <div id="collapse02" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <p class="font_sm text_tint my-0">食材都是當日限量採收，然後才開始進行包裝，包裝的紙材除了防污染、也能保存葉面的水份與濕度。宅配貨運因為先預冷，收到後除了濕度的保存剛好，溫度也會適宜的冷度。</p>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- 問題3 -->
+              <div class="accordion-item mb-3 shadow-sm" id="QA03">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse03" aria-expanded="false">
+                    <h2 class="font_sm my-0"><span class="badge bg_primary_darker me-2">Q3</span>食材的品項可以更換嗎？</h2>
+                  </button>
+                  <div id="collapse03" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <p class="font_sm text_tint my-0">食材都是當日限量採收，然後才開始進行包裝，包裝的紙材除了防污染、也能保存葉面的水份與濕度。宅配貨運因為先預冷，收到後除了濕度的保存剛好，溫度也會適宜的冷度。</p>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- 問題4 -->
+              <div class="accordion-item mb-3 shadow-sm" id="QA04">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse04" aria-expanded="false">
+                  <h2 class="font_sm my-0"><span class="badge bg_primary_darker me-2">Q4</span>下訂以後什麼時候可以到貨？</h2>
+                </button>
+                <div id="collapse04" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p class="font_sm text_tint my-0">食材都是當日限量採收，然後才開始進行包裝，包裝的紙材除了防污染、也能保存葉面的水份與濕度。宅配貨運因為先預冷，收到後除了濕度的保存剛好，溫度也會適宜的冷度。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 問題5 -->
+              <div class="accordion-item mb-3 shadow-sm" id="QA05">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse05" aria-expanded="false">
+                  <h2 class="font_sm my-0"><span class="badge bg_primary_darker me-2">Q5</span>退換貨方式及規則</h2>
+                </button>
+                <div id="collapse05" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p class="font_sm text_tint my-0">食材都是當日限量採收，然後才開始進行包裝，包裝的紙材除了防污染、也能保存葉面的水份與濕度。宅配貨運因為先預冷，收到後除了濕度的保存剛好，溫度也會適宜的冷度。</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Tab03 材料組合 -->
+          <div class="tab-pane mt-5 mx-0" id="news-tab-pane">
+            <!-- 進度1 -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <div class="bg_size_cover newsImg01"></div>
+                </div>
+                <div class="col-8">
+                  <ul class="p-2 p-lg-3">
+                    <h5 class="card-title font_md">新品推出｜丁香檸檬小紅莓飲</h5>
+                    <li class="text-xs text_tint font_number">2021-6-20</li>
+                    <li class="font_sm text_tint mt-3 d-none d-md-block">謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！</li>
+                    <li class="mt-3"><a class="link_cta">MORE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- 進度2 -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <div class="bg_size_cover newsImg02"></div>
+                </div>
+                <div class="col-8">
+                  <ul class="p-2 p-lg-3">
+                    <h5 class="card-title font_md">酪梨新飲｜莫西托薄荷綠</h5>
+                    <li class="text-xs text_tint font_number">2021-6-20</li>
+                    <li class="font_sm text_tint mt-3 d-none d-md-block">謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！</li>
+                    <li class="mt-3"><a class="link_cta">MORE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- 進度3 -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <div class="bg_size_cover newsImg03"></div>
+                </div>
+                <div class="col-8">
+                  <ul class="p-2 p-lg-3">
+                    <h5 class="card-title font_md">春季限定｜免草莓果昔配方包</h5>
+                    <li class="text-xs text_tint font_number">2021-6-20</li>
+                    <li class="font_sm text_tint mt-3 d-none d-md-block">謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！</li>
+                    <li class="mt-3"><a class="link_cta">MORE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab04 留言 -->
+          <div class="tab-pane mt-5 mx-0" id="message-tab-pane">
+            <div class="bg-white borderL">
+              <p>只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎<a class="link_cta">聯絡提案人！</a></p>
+            </div>
+            <!-- 留言1 -->
+            <div class="card p-2 p-md-3 mt-5">
+              <div class="d-flex align-items-center">
+                <img class="userImg" src="images/icon_user.jpg" alt="">
+                <ul class="ps-3">
+                  <li class="font_md">潔西卡</li>
+                  <li class="font_xs text_tint letter_spacing_l">2020年5月22日 11:32</li>
+                </ul>
+              </div>
+              <div class="card_body">
+                <p class="mt-1 mb-0">這是第二次回購了，食材部分很新鮮，拿到檸檬、薄荷葉、各式香料。</p>
+              </div>
+              <ul class="bg_light p-2 p-md-3 mt-3">
+                <li class="font_xs text_critical">提案者回覆</li>
+                <li>即使平常鮮少下廚，只要跟著簡單易懂的教學和食譜都能快速上手。</li>
+              </ul>
+            </div>
+            <!-- 留言2 -->
+            <div class="card p-2 p-md-3 mt-3">
+              <div class="d-flex align-items-center">
+                <img class="userImg" src="images/icon_user.jpg" alt="">
+                <ul class="ps-3">
+                  <li class="font_md">喬伊斯</li>
+                  <li class="font_xs text_tint letter_spacing_l">2020年5月22日 11:32</li>
+                </ul>
+              </div>
+              <div class="card_body">
+                <p class="mt-1 mb-0">斟酌過後當日全天可收貨，下了訂單。</p>
+              </div>
+            </div>
+            <!-- 留言3 -->
+            <div class="card p-2 p-md-3 mt-3">
+              <div class="d-flex align-items-center">
+                <img class="userImg" src="images/icon_user.jpg" alt="">
+                <ul class="ps-3">
+                  <li class="font_md">伯恩斯</li>
+                  <li class="font_xs text_tint letter_spacing_l">2020年5月22日 11:32</li>
+                </ul>
+              </div>
+              <div class="card_body">
+                <p class="mt-1 mb-0">運費如何計算，大量訂購有免運優惠嗎？</p>
+              </div>
+            </div>
+            <!-- 留言4 -->
+            <div class="card p-2 p-md-3 mt-3">
+              <div class="d-flex align-items-center">
+                <img class="userImg" src="images/icon_user.jpg" alt="">
+                <ul class="ps-3">
+                  <li class="font_md">斯巴達</li>
+                  <li class="font_xs text_tint letter_spacing_l">2020年5月22日 11:32</li>
+                </ul>
+              </div>
+              <div class="card_body">
+                <p class="mt-1 mb-0">想要請問如果當天沒有用完的保存方式。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 贊助專案表單 -->
+        <div class="mt-10">
+          <div class="relative text-center">
+            <img class="decoIcon" src="images/icon/icon_leaves.svg">
+            <h3 class="font_lg decoTitle">贊助專案</h3>
+            <span class="divider"></span>
+          </div>
+          <form action="">
+            <div class="mb-3">
+              <label for="caseOption" class="form-label">贊助方案</label>
+              <select class="form-select">
+                <option selected>請選擇贊助方案</option>
+                <option value="1">方案A: $1,200</option>
+                <option value="2">方案B: $1,400</option>
+                <option value="2">方案C: $2,200</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">收件人姓名</label>
+              <input type="text" class="form-control bg_light" id="name" placeholder="請輸入姓名">
+            </div>
+            <div class="mb-3">
+              <label for="tel" class="form-label">聯絡電話</label>
+              <input type="tel" class="form-control bg_light" id="tel" placeholder="請輸入聯絡電話">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">連絡信箱</label>
+              <input type="email" class="form-control bg_light" id="email" placeholder="123@gmail.com">
+            </div>
+            <div class="mb-3">
+              <label for="payment" class="form-label">付款方式</label>
+              <select class="form-select">
+                <option selected>請選擇付款方式</option>
+                <option value="1">信用卡付款</option>
+                <option value="2">匯款</option>
+              </select>
+            </div>
+          </form>
+          <div class="mb-3 text-center">
+            <button type="submit" class='btn btn-lg'>贊助專案</button>
+          </div>
+        </div>
+      </div>
+      <!-- 右邊欄位 -->
+      <!-- 募資方案 -->
+      <div class="col-12 col-md-4 px-md-0 mt-5">
+        <div class="card p-2 p-md-3">
+          <div class="d-flex align-items-center">
+            <img src="https://hexschool.github.io/boootstrap5WebLayout/assets/store_img.jpg" alt="" class="companyImg">
+            <ul class="ms-2 ms-lg-3">
+              <h4 class="font_md my-0">好事成雙事務所</h4>
+              <p class="my-0">已發起一個專案</p>
+            </ul>
+          </div>
+          <p class="mt-2 letter_spacing_m">沒有其他願望的時候，也要過得像是平常一樣早起。</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <ul class="d-flex">
+              <li class="iocMoon"><a href="#"><i class="icon-facebook"></i>
+              </a></li>
+              <li class="ms-3"><a href="#"><i class="icon-play"></i></a></li>
+            </ul>
+            <button class="btn btn-outline btn-sm d-flex align-items-center"><i class="icon-chat me-1"></i>聯絡我們
+            </button>
+          </div>
+        </div>
+        <div class="borderL borderR bg_light rounded mt-5">
+          <h3 class="font_xm py-1 text-center">選一個方案來支持</h3>
+        </div>
+        <!-- 方案 1-->
+        <div class="card mt-4">
+          <div class="card_top_img">
+            <img src="images/pac01.jpg" alt="">
+          </div>
+          <div class="card_body p-2 p-md-3">
+            <ul class="d-flex justify-content-between">
+              <li class="font_sm text_light letter_spacing_l">限時優惠</li>
+              <li class="font_sm text_light">2 days 20:05:20</li>
+            </ul>
+            <hr>
+            <h2 class="font_lg my-0">送到家自己動手材料包</h2><span class="font_lg font_number my-0">NT$ 1600</span>
+            <ul class="mt-3">
+              <li class="decoSquare decoSquareLight">已被贊助88次</li>
+              <li class="decoSquare">限量200個</li>
+            </ul>
+            <p class="mt-3 text_tint letter_spacing_m">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+            <a href="#" target="_blank" class="btn">贊助此專案</a>
+          </div>
+        </div>
+        <!-- 方案 2-->
+        <div class="card mt-5">
+          <div class="card_top_img">
+            <img src="images/pac02.jpg" alt="">
+          </div>
+          <div class="card_body p-2 p-md-3">
+            <ul class="d-flex justify-content-between">
+              <li class="font_sm text_light letter_spacing_l">限時優惠</li>
+              <li class="font_sm text_light">2 days 20:05:20</li>
+            </ul>
+            <hr>
+            <h2 class="font_lg my-0">門市自取檸檬材料包</h2><span class="font_lg font_number my-0">NT$ 1600</span>
+            <ul class="mt-3">
+              <li class="decoSquare decoSquareLight">已被贊助88次</li>
+              <li class="decoSquare">限量200個</li>
+            </ul>
+            <p class="mt-3 text_tint letter_spacing_m">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+            <a href="#" target="_blank" class="btn">贊助此專案</a>
+          </div>
+        </div>
+        <!-- 方案 3-->
+        <div class="card mt-5">
+          <div class="card_top_img">
+            <img src="images/pac03.jpg" alt="">
+          </div>
+          <div class="card_body p-2 p-md-3">
+            <ul class="d-flex justify-content-between">
+              <li class="font_sm text_light letter_spacing_l">限時優惠</li>
+              <li class="font_sm text_light">2 days 20:05:20</li>
+            </ul>
+            <hr>
+            <h2 class="font_lg my-0">指定宅配有機材料包</h2><span class="font_lg font_number my-0">NT$ 1600</span>
+            <ul class="mt-3">
+              <li class="decoSquare decoSquareLight">已被贊助88次</li>
+              <li class="decoSquare">限量200個</li>
+            </ul>
+            <p class="mt-3 text_tint letter_spacing_m">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+            <a href="#" target="_blank" class="btn">贊助此專案</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid bg_dark mt-5 my-auto">
+    <p class="font_xs text-center text-light py-3 px-0 m-0">Copyright © 拼拼 All rights reserved.</p>
+  </footer>
+
+  <!-- bs5 -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+  <script src="js/gototab.js"></script>
+</body>
+
+</html>

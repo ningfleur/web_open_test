@@ -1,0 +1,15 @@
+
+i.fa-facebook, 
+i.fa-youtube {
+  font-size: 30px;
+  color: $grey-dark;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+i.fa-comment-dots {
+  font-size: 18px;
+  color: $grey-dark;
+}
+

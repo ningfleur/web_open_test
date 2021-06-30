@@ -1,0 +1,491 @@
+//global base
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $text-normal;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+//global style 
+body {
+  font-family: 'Ubuntu', 'Noto Sans TC', "微軟正黑體", "Microsoft JhengHei", "PingFang", sans-serif;
+}
+
+h1 {
+  margin: 8px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-normal;
+}
+
+p, 
+li {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 300;
+  color: $text-normal;
+}
+
+p + p {
+  margin: 16px 0;
+}
+
+ol, ul {
+	list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// custom utilities 自訂通用類別
+.font_xl {
+  font-size: 32px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: $text-normal;
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.font_lg {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $text-normal;
+}
+
+.font_xm {
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $text-normal;
+}
+
+.font_md {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: $text-normal;
+}
+
+.font_sm {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $text-normal;
+}
+
+.font_xs {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.font_number {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  color: $text-light;
+}
+
+.relative {
+  position: relative;
+}
+
+.letter_spacing_l {
+  letter-spacing: 2px;
+}
+
+.letter_spacing_m {
+  letter-spacing: 0.7px;
+}
+
+.text_light {
+  color: $text-light;
+}
+
+.text_primary {
+  color: $primary;
+}
+
+.text_tint {
+  color: $grey-dark;
+}
+
+.text_critical {
+  color: $highlight;
+}
+
+a.link_cta {
+  color: #ff785e;
+  cursor: pointer;
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+.bg_light {
+  background-color: #f7f7f7;
+}
+
+.bg_dark {
+  background-color: $grey-dark;
+}
+
+.bg_primary {
+  background-color: $primary;
+}
+
+.bg_primary_darker {
+  background-color: $primary-dark;
+}
+
+//新增樣式
+.decoSquare {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: $grey-dark;
+}
+
+.decoSquareLight {
+  color: $text-light;
+  background-color: $grey-light;
+}
+
+.borderL {
+  padding-left: 15px;
+  border-left: 3px solid $primary;
+}
+
+.borderR {
+  padding-right: 15px;
+  border-right: 3px solid $primary;
+}
+
+.borderRounded_md {
+  border-radius: 16px;
+}
+
+.borderRounded_lg {
+  border-radius: 26px;
+}
+
+.bg_size_cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.mt-6 {
+  margin-top: 56px;
+}
+
+.mt-7 {
+  margin-top: 64px;
+}
+
+.mt-8 {
+  margin-top: 72px;
+} 
+
+.mt-9 {
+  margin-top: 80px;
+}
+
+.mt-10 {
+  margin-top: 96px;
+}
+
+// my global tools
+.stickyTop {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+
+// 導覽列
+nav.navbar {
+  border-bottom: 1px solid $primary;
+ }
+
+nav .navbar-logo {
+  width: 120px;
+  margin-right: 24px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $grey-dark;
+  &:focus {
+    color: $text-dark;
+  }
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+//修改全站元件-表單
+.form-label {
+  color: $text-normal;
+}
+
+.form-text, 
+.form-control {
+  color: $text-light;
+}
+
+//修改全站元件-按鈕
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $primary;
+  border: 1px solid $primary;
+  border-radius: 19px;
+  color: $text-dark;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  &:hover {
+    background-color: $highlight;
+    border-color: $highlight;
+    color: #ffffff;
+  }
+}
+
+.btn-outline {
+  background-color: #FFFFFF;
+  border: 1px solid $grey-dark;
+  border-radius: 19px;
+  color: $text-dark;
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+    color: $text-light;
+  }
+}
+
+.btn-lg {
+  padding: 10px 40px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  border-radius: 26px;
+  @include pad {
+    font-size: 16px;
+  }
+}
+
+.btn-sm {
+  font-size: 12px;
+  font-weight: 400;
+  color: $grey-dark;
+  border: 1px solid $grey-dark;
+}
+
+
+//新增標題設計
+.divider::before {
+  content:'';
+  width: 100%;
+  height: 2px;
+  background-color: $primary;
+  display: block;
+  position: absolute;
+  top: 56px;
+  z-index: -1;
+}
+
+.decoTitle {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 0 8px;
+}
+
+.decoIcon {
+  margin: 0 auto;
+  width: 52px;
+  margin-bottom: 8px;
+}
+
+
+// 自訂元件-頁籤
+.navTabs {
+  border-bottom: 1px solid #e8e8db;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navLink {
+  color: $grey-dark;
+  letter-spacing: 2px;
+  padding: 24px;
+  border-bottom: 2px solid transparent;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $text-dark;
+    border-bottom: 2px solid $primary;
+  }
+  @include pad {
+    padding: 6px 8px;
+  }
+  @include mobile {
+    letter-spacing: 0.7px;
+  }
+}
+
+.navLink.active,
+.navLink.show {
+  color: $text-dark;
+  border-bottom: 2px solid $primary;
+}
+
+
+//修改bootstrap5 tab樣式
+.nav-tabs .nav-link {
+  color: $grey-dark;
+  letter-spacing: 2px;
+  padding: 24px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  @include pad {
+    padding: 6px 8px;
+  }
+  @include mobile {
+    letter-spacing: 0.7px;
+  }
+}
+
+.nav-link {
+  transition: none;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border: 0;
+  border-bottom: 2px solid $primary;
+}
+
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active {
+  color: $text-dark;
+  border-bottom: 2px solid $primary;
+}
+
+
+//修改全站元件-折疊
+.accordion-button {
+  color: $grey-dark;
+  &::after{
+    background-image: url(../images/icon/chevron_down.svg);
+  }
+  &:hover {
+    background-color: $primary-light;
+  }
+  &:active {
+    background-color: $primary-light;
+  }
+  &:focus {
+    background-color: $primary-light;
+    border-color: $grey-light;
+    box-shadow: 0 0 0 0.05rem $grey-light;
+  }
+  &:not(.collapsed) {
+    color: $grey-dark;
+    background-color: #ffffff;
+  }
+  &:not(.collapsed)::after {
+    background-image: url(../images/icon/chevron_down.svg);
+  }
+}
+
+
+//page主圖進度條
+.progress-bar {
+  display: block;
+  width: 100%;
+  height: 16px;
+  background-color: $grey-light;
+  border-radius: 20px;
+  &::before{
+    content: '41%';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41%;
+    height: 16px;
+    background-color: $primary;
+    color: $text-light;
+  }
+}
+
+//page卡片募資方案
+.companyImg {
+  width: 100px;
+  height: 100px;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  @include pad {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.card_top_img img {
+  width: 100%;
+}
+
+//page留言板
+.userImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+//page目前進度
+.newsImg01 {
+  height: 100%;
+  background-image: url(../images/news01.jpg);
+}
+
+.newsImg02 {
+  height: 100%;
+  background-image: url(../images/news02.jpg);
+}
+
+.newsImg03 {
+  height: 100%;
+  background-image: url(../images/news03.jpg);
+}
+
+
+
+//iconmoon
+li.icoMoon:hover .icon-facebook::before {
+  color: #b5c99a;
+}
