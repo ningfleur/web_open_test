@@ -4,7 +4,7 @@ function goToTab1() {
 }
 
 function goToTab2() {
-  var elmnt = document.getElementById("QA-tab-pane");
+  var tabUp = document.getElementById("QA-tab-pane");
   elmnt.scrollIntoView();
 }
 
@@ -16,4 +16,4 @@ function goToTab3() {
 function goToTab4() {
   var elmnt = document.getElementById("message-tab-pane");
   elmnt.scrollIntoView();
- }
+ }  
