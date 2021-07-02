@@ -150,7 +150,7 @@ ol, ul {
 }
 
 a.link_cta {
-  color: #ff785e;
+  color: #ff7096;
   cursor: pointer;
 }
 
@@ -520,9 +520,5 @@ nav .navbar-logo {
 .newsImg03 {
   height: 100%;
   background-image: url(../images/news03.jpg);
-}
-
-li.icoMoon:hover .icon-facebook::before {
-  color: #b5c99a;
 }
 /*# sourceMappingURL=all.css.map */

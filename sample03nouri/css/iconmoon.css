@@ -41,7 +41,7 @@
   font-size: 30px;
 }
 
-.icon-facebook:hover:before,
-.icon-play:hover:before {
+.icon-facebook:hover::before,
+.icon-play:hover::before {
   color: #b5c99a;
 }
