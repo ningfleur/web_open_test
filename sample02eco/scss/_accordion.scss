@@ -1,0 +1,78 @@
+.accordionButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: left;
+  background-color: $secondary;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease
+}
+ 
+@media (prefers-reduced-motion:reduce) {
+.accordionButton {
+  transition: none
+}
+}
+ 
+.accordionButton:not(.collapsed) {
+color: #ffffff;
+background-color: $secondary;
+box-shadow: none;
+}
+ 
+.accordionButton:not(.collapsed)::after {
+  background-image: url("../images/icon/icon_minus.svg");
+  // transform: rotate(-180deg)
+  transform: opacity(0.5);
+}
+ 
+.accordionButton::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("../images/icon/icon_plus.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px;
+  transition: transform .2s ease-in-out
+ }
+ 
+ @media (prefers-reduced-motion:reduce) {
+  .accordionButton::after {
+   transition: none
+  }
+ }
+ 
+ .accordionButton:hover {
+  z-index: 2
+ }
+ 
+.accordionButton:active {
+  background-color: rgba(256, 256, 256, .15)
+}
+
+.accordionItem {
+  background-color: $secondary;
+  border-top: 1px solid #ffffff;
+}
+
+ul.accordionBody {
+  padding: 0 0 10px 30px;
+
+  li a {
+    color: #ffffff;
+    display: inline-block;
+    // text-decoration: underline;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #ffffff;
+    margin: 10px;
+  }
+}

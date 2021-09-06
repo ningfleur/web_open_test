@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單品頁面</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- iconmoon -->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- bootstrap5 -->
+    <link rel="stylesheet" href="bootstrap-5.1.0/css/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+  </head>
+
+<body>
+  <!-- 導覽列-->
+  <header class="header">
+    <div class="brand_logo">
+      <a href="index.html"><img class="brand_logo_img" src="images/brand_logo.svg" alt="brand logo"></a>
+    </div>
+    <div class="navbar_wrapper container-fluid">
+      <ul class="navbar_left d-none d-md-flex">
+        <li class="me-2"><a class="btn_text p-2" href="collections.html">所有產品</a></li>
+        <li><a class="btn_text p-2" href="blog.html">生活誌</a></li>
+      </ul>
+      <div class="navbar_left d-flex d-md-none">
+        <a class="open-menu hover_black" type="button">
+          <span class="icon-icon_ham_list"></span>
+        </a>
+      </div>
+      <ul class="navbar_right">
+        <li><a class="hover_black d-none d-sm-block" href="account.html"><span class="icon-icon_user"></span></a></li>
+        <li class="ms-3"><a class="open-bag hover_black d-block"> <span class="icon-icon_handbag"></span></a></li>
+      </ul>
+      <!-- menuOpen -->
+      <div class="fullscreen">
+        <div class="drawer_container">
+          <div class="drawer_left">
+            <div>
+              <img class="menu_brand" src="images/brand_logo.svg" alt="brand logo">
+              <ul class="menu_content">
+                <li class="btn_text"><a href="collections.html">所有產品</a></li>
+                <li class="btn_text"><a href="blog.html">生活誌</a></li>
+                <button><a class="btn_text hover_black menu_login" href="account.html">登入</a></button>
+              </ul>
+            </div>
+            <div class="menu_footer d-flex align-items-stretch">
+              <div class="menu_footer_icon"><img src="images/brand_logo_square_light.svg" alt="">
+              </div>
+              <ul class="menu_footer_text">
+                <li>友善市集</li>
+                <li>讓美好的事物變得更有意義</li>
+              </ul>
+            </div>
+          </div>
+          <div class="drawer_right">
+            <a class="close-drawer hover_white" type="button">
+              <span class="icon-icon_close"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- bagOpen -->
+      <div class="fullscreen_bag">
+        <div class="bag_container">
+          <div class="d-flex">
+            <div class="bag_content">
+              <div class="bag_header">
+                <h3 class="text_lg">購物袋</h3>
+              </div>
+              <p class="text_xs mt-3">購物袋裡目前沒有商品</p>
+              <a href="index.html"><span class="btn_text">繼續購物</span></a>
+            </div>
+            <div class="bg_white p-2">
+              <a class="close-bag" type="button">
+                <span class="icon-icon_close"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <!-- 單一產品 -->
+  <section class="py-10">
+    <div class="container">
+      <div class="pv_grid">
+        <div class="pv_photo"><img src="images/products/photo-1622116619019-4aa293991657.jpg" alt="">
+        </div>
+        <div class="pv_content">
+          <span class="pre-text">燈塔屋</span>
+          <h1 class="pv_name">葡萄柚柑橘家事皂</h1>
+          <ul class="d-flex align-items-center justify-content-between">
+            <li class="product_price"><span class="text_sm">NT$</span>280</li>
+            <li class="product_discount text_xs">最高回饋6%</li>
+          </ul>
+          <div class="pv_info">
+            <p class="pre-text">產品編號#70152</p>
+            <p class="text_sm">燈塔屋無毒家事皂讓每天的碗盤清潔工作更加愉快。植物萃取的配方，可以輕鬆洗淨油污和烹飪所產生的油漬。</p>
+            <span class="text_xs d-flex align-items-center"><img src="images/icon/none_toxic.svg" class="me-2" alt="">無毒配方</span>
+          </div>
+          <div class="mt-5 pv_btn_wrap">
+            <div class="pv_quantity_btn me-2">
+              <button class="btn-clean pv_quantity">-</button>
+              <span class="pv_quantity">1</span>
+              <button class="btn-clean pv_quantity">+</button>
+            </div>
+            <button class="btn btn_addToBag">放入購物袋</button>
+          </div>
+          <div class="pv_detail">
+            <h5 class="text_sm">產品細節</h5>
+            <ul>
+              <li class="text_sm list-bullet">主要成分橄欖油和椰子油，搭配葡萄柚和柑橘精油</li>
+              <li class="text_sm list-bullet">尺寸為18 x 18 x 12公分</li>
+              <li class="text_sm list-bullet">一般收納狀態可以維持4-6個月</li>
+              <li class="text_sm list-bullet">可以自然分解</li>
+              <li class="text_sm list-bullet">不經過動物測試</li>
+              <li class="text_sm list-bullet">不含人造香精及染料</li>
+            </ul>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 選品故事 -->
+  <div class="py-10 bg_300">
+    <div class="container">
+      <div class="pv_loveBrand_outline">
+        <div class="col-left">
+          <p class="pre-text">鍾愛品牌</p>
+          <p class="text_xl">「燈塔屋」的故事</p>
+          <i></i>
+          <p class="text_sm text_secondary">從廢棄場回收超過62,000個瓶罐</p>
+        </div>
+        <div class="col-right">
+          <p class="mb-0">車通的賽輕子正裝經回議現在完氣停光發保這、極的得光運比特向！之晚響。管門課可不遊車被前部行好作市大到約我！因弟演一西雖了紙完積也電近導了要機技到最北情？有世見理因起市為要你國的臉分術師吸它國然品各。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 亮點商品 -->
+  <section class="py-10 bg_300">
+    <div class="container text-center">
+      <h6 class="pre-text">亮點商品</h6>
+      <h2 class="text_2xl">挑選你最在乎的價值</h2>
+    </div>
+    <div class="container mt-5 relative">
+      <div class="home_multiSwiper_wrap">
+        <div class="swiper multiSwiper">
+          <div class="swiper-wrapper mb-8">
+            <div class="swiper-slide">
+              <div class="product_card">
+                <a href="collections.html"><img class="product_image" src="images/products/photo-1546552696-7d5f4e89b0e8.jpeg" alt=""></a>
+                <ul class="product_card_middle">
+                  <li class="text_xs text_light">無垢生活</li>
+                  <h5 class="product_name">軟毛清潔刷具組</h5>
+                </ul>
+                <div class="product_card_bottom">
+                  <ul class="flex-reverse">
+                    <li><a class="product_add text_xs">加入購物清單</a></li>
+                    <li class="product_price"><span class="text_sm">NT$</span>699</li>
+                  </ul>
+                  <li class="product_discount text_xs">最高回饋6%</li>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <a href="collections.html"><img class="product_image" src="images/products/photo-1607006482735-31c122e8cd3d.jpg" alt=""></a>
+                <ul class="product_card_middle">
+                  <li class="text_xs text_light">無垢生活</li>
+                  <h5 class="product_name">石楠佛手柑洗衣皂</h5>
+                </ul>
+                <div class="product_card_bottom">
+                  <ul class="flex-reverse">
+                    <li><a class="product_add text_xs">加入購物清單</a></li>
+                    <li class="product_price"><span class="text_sm">NT$</span>280</li>
+                  </ul>
+                  <li class="product_discount text_xs">最高回饋6%</li>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <a href="collections.html"><img class="product_image" src="images/products/photo-1528740561666-dc2479dc08ab.jpeg" alt=""></a>
+                <ul class="product_card_middle">
+                  <li class="text_xs text_light">無垢生活</li>
+                  <h5 class="product_name">有機薄荷浴室潔淨噴霧</h5>
+                </ul>
+                <div class="product_card_bottom">
+                  <ul class="flex-reverse">
+                    <li><a class="product_add text_xs">加入購物清單</a></li>
+                    <li class="product_price"><span class="text_sm">NT$</span>580</li>
+                  </ul>
+                  <li class="product_discount text_xs">最高回饋6%</li>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <a href="collections.html"><img class="product_image" src="images/products/photo-1561320637-607b6b19f493.jpg" alt=""></a>
+                <ul class="product_card_middle">
+                  <li class="text_xs text_light">輕時尚</li>
+                  <h5 class="product_name">零浪費環保餐具盒</h5>
+                </ul>
+                <div class="product_card_bottom">
+                  <ul class="flex-reverse">
+                    <li><a class="product_add text_xs">加入購物清單</a></li>
+                    <li class="product_price"><span class="text_sm">NT$</span>480</li>
+                  </ul>
+                  <li class="product_discount text_xs">最高回饋6%</li>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <a href="collections.html"><img class="product_image" src="images/products/photo-1537130508986-20f4fd870b4e.jpeg" alt=""></a>
+                <ul class="product_card_middle">
+                  <li class="text_xs text_light">無垢生活</li>
+                  <h5 class="product_name">防風林編織環保袋</h5>
+                </ul>
+                <div class="product_card_bottom">
+                  <ul class="flex-reverse">
+                    <li><a class="product_add text_xs">加入購物清單</a></li>
+                    <li class="product_price"><span class="text_sm">NT$</span>280</li>
+                  </ul>
+                  <li class="product_discount text_xs">最高回饋6%</li>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <a href="collections.html"><img class="product_image" src="images/products/photo-1559839914-17aae19cec71.jpg" alt=""></a>
+                <ul class="product_card_middle">
+                  <li class="text_xs text_light">無垢生活</li>
+                  <h5 class="product_name">一池春水再製玻璃水瓶</h5>
+                </ul>
+                <div class="product_card_bottom">
+                  <ul class="flex-reverse">
+                    <li><a class="product_add text_xs">加入購物清單</a></li>
+                    <li class="product_price"><span class="text_sm">NT$</span>300</li>
+                  </ul>
+                  <li class="product_discount text_xs">最高回饋6%</li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- pagination -->
+        <div id="multi-swiper-pagination" class="swiper-pagination"></div>
+      </div> 
+    </div>
+      
+      <!-- button -->
+      <div id="multi-swiper-button-next" class="swiper-button-next d-none d-sm-flex"></div>
+      <div id="multi-swiper-button-prev" class="swiper-button-prev d-none d-sm-flex"></div>
+    </div>
+  </section>
+
+  <!-- 訂閱電子報 -->
+  <section class="py-18">
+    <div class="container text-center">
+      <h2 class="text_2xl">最新優惠</h2>
+      <p class="mt-3">訂閱電子報，立即享有最新優惠，最先收到新品預購消息</p>
+    </div>
+    <div class="mt-6">
+      <form class="form_container">
+        <input type="text" class="form_item form_item_1" placeholder="YOUR NAME">
+        <input type="text" class="form_item form_item_2" placeholder="YOUR EMAIL">
+        <button type="submit" class="btn-subscribe form_item_3">訂閱<span
+            class="icon-icon_arrow_right_black"></span></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="brand_desktop_container">
+      <div class="py-5 pe-8 w-50">
+        <div class="branding_grid">
+          <ul class="branding_outline">
+            <li class="branding_desktop_icon">
+              <img src="images/brand_logo_square.svg" alt="">
+            </li>
+            <li class="branding_text text_md">友善市集</li>
+            <li class="branding_text">讓美好的事物變得更有意義</li>
+          </ul>
+          <p class="text_xs text_white text-center mt-3">Copyright Eco Market 2021. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="bg_300 py-5 ps-8 w-50">
+        <div class="support_grid">
+          <ul class="support">
+            <li class="text_sm">購物</li>
+            <li class="text_xs"><a href="collections.html">所有商品</a></li>
+            <li class="text_xs"><a href="collections.html">可重複使用</a></li>
+            <li class="text_xs"><a href="collections.html">無毒系列</a></li>
+          </ul>
+          <ul class="support">
+            <li class="text_sm">關於</li>
+            <li class="text_xs"><a href="#">eco market 市集</a></li>
+            <li class="text_xs"><a href="blog.html">eco living 生活誌</a></li>
+          </ul>
+          <ul class="support mt-2">
+            <li class="text_sm">客戶服務</li>
+            <li class="text_xs"><a href="#">與我們聯繫</a></li>
+            <li class="text_xs"><a href="#">服務條款</a></li>
+            <li class="text_xs"><a href="#">隱私權政策</a></li>
+          </ul>
+          <ul class="support mt-2">
+            <li class="text_sm">社群分享</li>
+            <ul class="d-flex justify-content-start align-items-center mt-1">
+              <a href="#" target="blank"><i class="icon icon-instegram me-3"></i></a>
+              <a href="#" target="blank"><i class="icon icon-facebook me-3"></i></a>
+              <a href="#" target="blank"><i class="icon icon-pinterest me-3"></i></a>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="brand_mobile_container">
+      <div class="brand_mobile_outline d-flex">
+        <div class="branding_mobile_icon">
+          <img src="images/brand_logo_square.svg" alt="">
+        </div>
+        <ul class="branding_mobile_text">
+          <li class="text_md text_white">友善市集</li>
+          <li class="text_sm text_white">讓美好的事物變得更有意義</li>
+        </ul>
+      </div>
+      <!-- accordion -->
+      <div class="accordion" id="accordionFooter">
+        <div class="accordionItem">
+          <h5 class="m-0" id="ac-headingOne">
+            <button class="accordionButton collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ac1"
+              aria-expanded="false" aria-controls="ac1">
+              購物
+            </button>
+          </h5>
+          <div id="ac1" class="accordion-collapse collapse" aria-labelledby="ac-headingOne"
+            data-bs-parent="#accordionFooter">
+            <ul class="accordionBody">
+              <li class="text_xs"><a href="collections.html">所有商品</a></li>
+              <li class="text_xs"><a href="collections.html">可重複使用</a></li>
+              <li class="text_xs"><a href="collections.html">無毒系列</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordionItem">
+          <h5 class="m-0" id="ac-headingTwo">
+            <button class="accordionButton collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ac2"
+              aria-expanded="false" aria-controls="ac2">
+              關於
+            </button>
+          </h5>
+          <div id="ac2" class="accordion-collapse collapse" aria-labelledby="ac-headingTwo"
+            data-bs-parent="#accordionFooter">
+            <ul class="accordionBody">
+              <li class="text_xs"><a href="index.html">eco market 市集</a></li>
+              <li class="text_xs"><a href="blog.html">eco living 生活誌</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordionItem">
+          <h5 class="m-0" id="ac-headingThree">
+            <button class="accordionButton collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ac3"
+              aria-expanded="false" aria-controls="ac3">
+              顧客服務
+            </button>
+          </h5>
+          <div id="ac3" class="accordion-collapse collapse" aria-labelledby="ac-headingThree"
+            data-bs-parent="#accordionFooter">
+            <ul class="accordionBody">
+              <li class="text_xs"><a href="#">聯絡我們</a></li>
+              <li class="text_xs"><a href="#">服務條款</a></li>
+              <li class="text_xs"><a href="#">隱私權政策</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg_300 py-2 d-flex justify-content-center align-items-center">
+        <a href="#" target="blank"><i class="icon icon-instegram mx-3"></i></a>
+        <a href="#" target="blank"><i class="icon icon-facebook mx-3"></i></a>
+        <a href="#" target="blank"><i class="icon icon-pinterest mx-3"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper1 = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+  <script>
+    var swiper2 = new Swiper(".multiSwiper", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      slidesPerGroup: 2,
+      loop: false,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: "#multi-swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: "#multi-swiper-button-next",
+        prevEl: "#multi-swiper-button-prev",
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          slidesPerGroup: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  </script>
+  
+  <!-- bs5 -->
+  <script src="bootstrap-5.1.0/js/bootstrap.bundle.min.js"></script>
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <!-- custom -->
+  <script src="js/nav.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+
+</html>

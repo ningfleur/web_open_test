@@ -1,0 +1,1810 @@
+//global reset
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $text-normal;
+  text-decoration: none;
+  display: block;
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+button {
+  border-width: 0px;
+  border-color: transparent;
+  &:hover {
+    border-width: 0px;
+    border-color: transparent;
+  }
+}
+
+//global style 
+body {
+  font-family: 'Ubuntu', 'Noto Sans TC', "微軟正黑體", "Microsoft JhengHei", "PingFang", sans-serif;
+}
+
+h1 {
+  margin: 8px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-normal;
+}
+
+p, 
+li {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 300;
+  color: $text-normal;
+}
+
+p + p {
+  margin: 16px 0;
+}
+
+ol, ul {
+	list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// 自訂通用類別 custom utilities 
+// custom text
+.text_3xl {
+  font-size: 48px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: $text-normal;
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.text_2xl {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: $text-normal;
+  @include smallScreen {
+    font-size: 32px;
+  }
+}
+
+.text_xl {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: $text-normal;
+  @include smallScreen {
+    font-size: 22px;
+  }
+}
+
+.text_lg {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 100;
+  color: $text-normal;
+}
+
+.text_md {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: $text-normal;
+}
+
+.text_sm {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $text-normal;
+}
+
+.text_xs {
+  font-size: 12px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.pre-text {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: $text-light;
+}
+
+.btn_text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 10%;
+}
+
+.letter_spacing_l {
+  letter-spacing: 2px;
+}
+
+.letter_spacing_m {
+  letter-spacing: 0.7px;
+}
+
+.text_white {
+  color: #ffffff;
+}
+
+.text_dark {
+  color: $text-dark;
+}
+
+.text_light {
+  color: $text-light;
+}
+
+.text_primary {
+  color: $primary;
+}
+
+.text_secondary {
+  color: $secondary;
+}
+
+.text_critical {
+  color: $accent;
+}
+
+.text-serif {
+  font-family: 'Noto Serif TC', serif;
+}
+
+a.hover_white {
+  cursor: pointer;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+a.hover_black {
+  cursor: pointer;
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+.bg_300 {
+  background-color: $bg_300;
+}
+
+.bg_200 {
+  background-color: $bg_200;
+}
+
+.bg_100 {
+  background-color: $bg_100;
+}
+
+.bg_white {
+  background-color: #fff;
+}
+
+.bg_secondary {
+  background-color: $secondary;
+}
+
+//style
+.decoBox {
+  background-color: $primary-light;
+  display: inline-block;
+  padding: 3px 4px;
+  align-items: center;
+}
+
+//spacing 
+.mt-6 {
+  margin-top: 60px;
+}
+
+.mt-7 {
+  margin-top: 70px;
+}
+
+.mt-8 {
+  margin-top: 80px;
+} 
+
+.mt-9 {
+  margin-top: 90px;
+}
+
+.mt-10 {
+  margin-top: 100px;
+}
+
+.mb-8 {
+  margin-bottom: 80px;
+}
+
+.mb-10 {
+  margin-bottom: 100px;
+}
+
+.pt-10 {
+  padding-top: 100px;
+}
+
+.pb-10 {
+  padding-bottom: 100px;
+}
+
+.py-10 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.py-18 {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.pe-8 {
+  padding-right: 80px;
+  @include laptop {
+    padding-right: 30px;
+  }
+}
+
+.ps-8 {
+  padding-left: 80px;
+  @include laptop {
+    padding-left: 30px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.bg_size_cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+//新增 global layout
+.container_M {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  @include laptop {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.container_L {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include laptop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+//全站元件-表單
+.form-label {
+  color: $text-normal;
+}
+
+.form-text, 
+.form-control {
+  color: $text-light;
+}
+
+//全站元件-按鈕
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: $text-dark;
+  border: 1px solid $text-dark;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+  &:hover {
+    color: #000000;
+    background-color: $primary-light;
+    border: 1px solid $primary-light;
+  }
+}
+
+.btn-primary {
+  padding: 14px 36px;
+  letter-spacing: 3.6px;
+  color: #000000;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-clean {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  border: 0px solid transparent;
+  cursor: pointer;
+}
+
+.btn-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 26px;
+  height: 48px;
+  min-width: 100px;
+  border-radius: 8px;
+  border: 0px;
+  color: #ffffff;
+  background-color: $text_dark;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  &:hover
+  .icon-icon_arrow_right_black:before {
+    margin-left: 8px;
+  } 
+}
+
+html {
+  --L-btn: 232px;
+  --M-btn: 94px;
+  --S-btn: 78px;
+}
+
+.long_center {
+  position: absolute;
+  left: calc((100% - var(--L-btn)) / 2 );
+}
+
+.medium_center {
+  position: absolute;
+  left: calc((100% - var(--M-btn)) / 2 );
+}
+
+.samll_center {
+  position: absolute;
+  left: calc((100% - var(--S-btn)) / 2 );
+}
+
+.btn-more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  // height: 48px;
+  padding: 0;
+  border: none;
+  color: $accent;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: $accent;
+  }
+  &:hover
+  .icon-icon_arrow_right_red:before {
+    margin-left: 10px;
+  } 
+}
+
+//導覽列
+.header {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+
+.is-sticky {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.navbar_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  overflow: hidden;
+}
+
+.brand_logo {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  z-index: 1002;
+}
+
+.brand_logo_img {
+ height: 48px;
+ padding: 10px 0;
+ position: relative;
+ top: 0;
+ fill: #708D92;
+ transition: all 0.5s;
+ @include pad {
+  height: 40px;
+}
+ @include smallScreen {
+   max-width: 150px;
+ }
+}
+
+.scroll-top {
+  height: 40px;
+  transition: all 0.5s;
+}
+
+.open-menu {
+  width: 32px;
+  height: 32px;
+  z-index: 1002;
+}
+
+.navbar_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1002;
+  li {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+//bagOpen
+.fullscreen_bag {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1002;
+  background-color: rgba(256, 256, 256, 0.75);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.show_bag {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bag_container {
+  position: absolute;
+  right: -550px;
+  top: 0;
+  min-width: 500px;
+  max-width: 800px;
+  height: 100%;
+  background-color: #ffffff;
+  transition: right 0.3s;
+  @include mobile {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.bag_content {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.bag_header {
+  padding: 30px 0 20px 0;
+  border-bottom: 1px solid $grey_100;
+  margin-bottom: 30px;
+}
+
+.open_bag {
+  right: 0;
+  transition: right 0.3s;
+}
+
+.navbar_left {
+  z-index: 1002;
+}
+
+//menuOpen
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  background-color: rgba(0, 0, 0, 0.75);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.drawer_container {
+  position: relative;
+  left: -550px;
+  top: 0;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  transition: left 0.3s;
+}
+
+.open {
+  left: 0;
+  transition: left 0.3s;
+}
+
+.drawer_left {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.drawer_right {
+  padding: 8px;
+  background-color: $secondary;
+}
+
+.menu_brand {
+  margin: 30px auto;
+  width: 120px;
+}
+
+.menu_content {
+  border-top: 1px solid $text_normal;
+  li {
+    padding: 16px 10px;
+    border-bottom: 1px solid $grey_100;
+    width: 100%;
+  }
+  button {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0px solid transparent;
+    background-color: $bg_300;
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+}
+
+a.menu_login {
+  display: block;
+  width: 100%;
+  padding: 16px 10px;
+}
+
+.menu_footer {
+  border: 1px solid $grey_200;
+}
+
+.menu_footer_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid $grey_200;
+  padding: 10px 20px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  img {
+    min-width: 60px;
+  }
+}
+
+.menu_footer_text {
+  flex-grow: 2;
+}
+
+.menu_footer_text li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 10px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  color: $text-light;
+  &:nth-child(1) {
+    border-bottom: 1px solid $grey_200;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  @include smallScreen {
+    padding: 12px 10px;
+  }
+}
+
+//首頁：封面
+.cover {
+  min-height: 800px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 280px 0;
+  background-image: url(../images/cover_Lpink.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include pad {
+    background-image: url(../images/cover_Mpink.jpg);
+    min-height: 768px
+  }
+  @include mobile {
+    min-height: 700px;
+    padding: 200px 0;
+  }
+}
+
+.cover_title {
+  font-size: 48px;
+  font-family: 'Noto serif TC', serif;
+  letter-spacing: 2px;
+  @include mobile {
+    font-size: 36px;
+  }
+}
+
+.cover_subtitle {
+  font-size: 22px;
+  font-weight: 100;
+  margin-top: 12px;
+  letter-spacing: 3px;
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+//首頁：公益行動
+.donate_wrapper {
+  background-color: $secondary;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: -60px;
+  max-width: 1140px;
+}
+
+.donate_outline {
+  width: 100%;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include pad {
+    flex-direction: column;
+  }
+}
+
+.donate_column {
+  width: 35%;
+  min-height: 120px;
+  border-right: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  @include pad {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+.donate_split_column {
+  flex-shrink: 1;
+  width: 30%;
+  @include pad {
+    width: 100%;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    &:nth-child(1) {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+}
+
+.donate_cta {
+  cursor: pointer;
+  a {
+    position: relative;
+    margin-left: -10px;
+    transition: all 0.5s;
+    color: #ffffff;
+    &:hover{
+      color: #ffffff;
+    }
+  }
+  .icon-icon_arrow_right_black:before {
+    position: absolute;
+    font-size: 20px;
+    top: 4px;
+    left: 50px;
+  }
+  &:hover
+  .icon-icon_arrow_right_black:before {
+    color: #ffffff;
+    left: 56px;
+  } 
+}
+
+//首頁：關於我們 
+.illu_items_wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.illu_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  max-width: 240px;
+  text-align: center;
+  max-height: 360px;
+}
+
+.illu_img {
+  display: block;
+  max-width: 220px;
+  height: auto;
+  border-radius: 50%;
+  background-color: #F7F5F2;
+}
+
+//swiper元件
+:root {
+  --swiper-navigation-size: 32px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size)/ 32 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-normal;
+}
+
+.swiper-pagination-bullet {
+  background-color: $text-light;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//首頁：產品卡片輪播
+.home_multiSwiper_wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  @include smallScreen {
+    padding: 0;
+  }
+}
+
+//元件：產品卡片
+.product_card {
+  display: flex;
+  flex-direction: column;
+  max-width: 325px;
+}
+
+.product_card_middle {
+  margin-top: 20px;
+  border-bottom: 1px solid $grey_100;
+  margin-bottom: 12px;
+  @include smallScreen {
+    margin-bottom: 8px;
+  }
+}
+
+.product_card_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @include mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  @include smallScreen {
+    flex-direction: column;
+  }
+}
+
+.flex-reverse {
+  display: flex;
+  align-items: baseline;
+  @include smallScreen {
+    flex-direction: column;
+  }
+}
+
+.product_name {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: 'Noto serif TC', serif;
+  letter-spacing: 0.6px;
+  color: $text-dark;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  @include smallScreen {
+    font-size: 16px;
+  }
+}
+
+.product_add {
+  display: block;
+  padding: 6px 4px 6px 0;
+  margin-right: 8px;
+  cursor: pointer;
+  @include smallScreen {
+    margin-bottom: 8px;
+  }
+}
+
+.product_price {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0%;
+  color: $text-dark;
+  @include smallScreen {
+    font-size: 18px;
+  }
+}
+
+.product_discount {
+  background-color: $primary-light;
+  display: inline-block;
+  padding: 2px 4px;
+  align-items: center;
+  @include pad {
+    margin-top: 12px;
+  }
+  @include mobile {
+    margin-top: 4px;
+  }
+}
+
+//產品頁
+.p_collection_grid {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  @include pad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-column-gap: 20px;
+  }
+}
+
+.p_collection_card {
+  display: flex;
+  flex-direction: column;
+}
+
+// .p_image {
+//   width: 100%;
+//   max-height: 464px;  
+// }
+
+//單一商品頁
+.pv_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  @include pad {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.pv_photo {
+  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  img {
+    width: 100%;
+    max-width: 520px;
+  }
+  @include pad {
+    max-width: 400px;
+    padding: 0;
+  }
+}
+
+.pv_content {
+  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 520px;
+  @include pad {
+    max-width: 520px;
+    margin-top: 80px;
+  }
+  @include smallScreen {
+    max-width: 360px;
+    margin-top: 50px;
+  }
+}
+
+.pv_name {
+  font-size: 32px;
+  font-family: 'Noto Serif TC', serif;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 0;
+  @include pad {
+    font-size: 24px;
+  }
+}
+
+.pv_brand {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: $text-light;
+}
+
+.pv_info,
+.pv_detail {
+  margin-top: 50px;
+  border-top: 1px solid $grey_100;
+  padding-top: 20px;
+}
+
+.pv_detail li {
+  padding: 4px 0;
+  padding-left: 12px;
+}
+
+.list-bullet::before {
+  content: "";
+  position: relative;
+  top: 12px;
+  left: -12px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: $grey_200;
+  border-radius: 50%;
+}
+
+.pv_btn_wrap {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  @include smallScreen {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.pv_quantity_btn {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: 1px solid $grey_100;
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 35%;
+  @include smallScreen {
+    width: 100%;
+  }
+}
+
+.pv_quantity {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: inline-block;
+  min-width: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  // background-color: $primary;
+  &:nth-child(2) {
+    flex-grow: 1;
+  }
+  @include mobile {
+    min-width: 30px;
+  }
+}
+
+.btn_addToBag {
+  width: 65%;
+  @include smallScreen {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+.pv_loveBrand_outline {
+  border: 1px solid $text_dark;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.col-left,
+.col-right {
+  width: 50%;
+  min-height: 150px;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include pad {
+    padding: 30px 20px;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.col-left {
+  border-right: 1px solid $text_dark;
+  @include mobile {
+    border-right: 0;
+    border-bottom: 1px solid $text_dark;
+  }
+}
+
+//首頁：新品介紹//
+.new_product_card {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &:nth-of-type(2n+1) {
+    flex-direction: row-reverse;
+    background-color: $bg_300;
+  }
+  @include pad {
+    flex-direction: column;
+    padding: 30px 15px;
+    &:nth-of-type(2n+1) {
+      flex-direction: column;
+    }
+  }
+}
+
+.new_product_card_top {
+  width: 70%;
+  max-width: 420px;
+  height: 420px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50% 50%;
+  background-color: #fff;
+  margin: 0 90px;
+  @include pad {
+    width: 100%;
+    max-width: 330px;
+    height: 330px;
+    margin: 0;
+  }
+  @include smallScreen {
+    max-width: 240px;
+    height: 240px;
+    margin: 0;
+  }
+  &:nth-of-type(2n+1){
+    @include pad {
+      margin: 0;
+    }
+  }
+}
+
+.np01 {
+  background-image: url("../images/products/photo-1561320637-607b6b19f493.jpg");
+}
+
+.np02 {
+  background-image: url(../images/products/photo-1622116619019-4aa293991657.jpg);
+}
+
+.np03 {
+  background-image: url(../images/products/photo-1582131503261-fca1d1c0589f.jpg);
+  background-position: center bottom;
+}
+
+.new_product_card_bottom {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  // &:nth-child(2) {
+  //   align-items: flex-end;
+  // }
+  @include pad {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+// 首頁：生活誌文章
+.blog_feature_card_item {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.blog_feature_card_img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.blog_feature_card_content {
+  width: 50%;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include pad {
+    padding: 30px 20px;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+// 首頁：instegram
+.pictures_grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 0px;
+    
+  @include pad {
+    width: 100%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  @include smallScreen {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.pictures_grid_img {
+  cursor: pointer;
+  padding: 10px;
+  @include pad {
+    padding: 5px;
+  }
+}
+
+.post_grid {
+  display: flex;
+  flex-direction: row;
+  @include pad {
+    flex-direction: column;
+  }
+}
+
+.post_photo {
+  width: 50%;
+  @include pad {
+    width: 100%;
+  }
+}
+
+.post_content {
+  padding: 10px;
+  width: 50%;
+  @include pad {
+    width: 100%;
+  }
+}
+
+.btn-right {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+
+// 首頁：訂閱電子報
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  @include pad {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.form_item {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1;
+  color: $text_light;
+  border: 1px solid $grey_100;
+  appearance: none;
+  border-radius: 8px;
+  margin: 0 10px 0 0;
+  padding: 16px 8px;
+  width: 100%;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  &:focus {
+    color: $text-dark;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+   }  
+  @include pad {
+    margin: 0 0 20px 0;
+  }
+}
+
+.form_item_1 {
+  flex: 1 0 0;
+}
+
+.form_item_2 {
+  flex: 3 0 0;
+}
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+// footer desktop
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.brand_desktop_container {
+  display: flex;
+  align-items: stretch;
+  background-color: $secondary;
+  @include mobile {
+    display: none;
+  }
+}
+
+.branding_grid {
+  float: right;
+  padding-left: 15px;
+}
+
+.branding_outline {
+  border: 1px solid #ffffff;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.branding_mobile_icon,
+.branding_desktop_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ffffff;
+  flex-grow: 1;
+  width: 30%;
+  padding: 40px;
+  @include smallScreen {
+    padding: 10px;
+  }
+  img {
+    max-width: 160px;
+    @include pad {
+      max-width: 100px;
+    }
+    @include smallScreen {
+      max-width: 80px;
+    }
+  }
+}
+
+.branding_text {
+  flex-grow: 2;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  color: #ffffff;
+  &:nth-last-of-type(1) {
+    border-top: 1px solid #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+  }
+}
+
+.support_grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px 10px;
+  max-width: 300px;
+}
+
+ul.support {
+  li a {
+    display: inline-block;
+    padding: 3px 0;
+  }
+}
+
+// footer mobile
+.brand_mobile_container {
+  display: none;
+  @include mobile {
+    display: block;
+    background-color: $secondary;
+    display: block;
+    width: 100%;
+  }
+}
+
+.brand_mobile_outline {
+  display: flex;
+  align-items: stretch;
+}
+
+.branding_mobile_text {
+  flex-grow: 2;
+}
+
+.branding_mobile_text li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  height: 50%;
+  color: #ffffff;
+  
+  @include smallScreen {
+    padding: 24px 10px;
+    font-size: 12px;
+  }
+  &:nth-child(1) {
+    border-bottom: 1px solid #ffffff;
+    font-size: 14px;
+  }
+}
+
+// 會員登入頁
+.login_wrapper {
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  @include mobile {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.login_btn_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  @include mobile {
+    max-width: 300px;
+  }
+  @include smallScreen {
+    align-items: stretch;
+  }
+}
+
+.btn-login {
+  display: block;
+  padding: 20px 60px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  width: 400px;
+  min-width: 200px;
+  color: $text-dark;
+  background-color: $primary;
+  @include mobile {
+    font-size: 14px;
+    max-width: 300px;
+    padding: 18px 10px;
+  }
+  @include smallScreen {
+    width: 100%;
+  }
+  &:hover {
+    color: $text-dark;
+    background-color: $primary-light;
+  }
+}
+
+.loginApple {
+  color: #ffffff;
+  background-color: $text_dark;
+  &:hover {
+    color: #ffffff;
+    background-color: $text_dark;
+  }
+}
+
+.loginFB {
+  color: #ffffff;
+  background-color: #3b5998;
+  &:hover {
+    color: #ffffff;
+    background-color: #3b5998;
+  }
+}
+
+.loginGoogle {
+  color: $text-dark;
+  background-color: #ffffff;
+  border: 1px solid $text-dark;
+  &:hover {
+    color: $text-dark;
+    background-color: #ffffff;
+  }
+}
+
+//生活誌
+.blog_logo {
+  width: 100%;
+  background-color: $bg_100;
+  padding: 120px 0 80px;
+  img {
+    margin: 0 auto;
+    max-width: 300px;
+    @include pad {
+      max-width: 260px;
+    }
+    @include mobile {
+      max-width: 240px;
+    }
+    @include smallScreen {
+      max-width: 180px;
+    }
+  }
+  @include smallScreen {
+    padding: 100px 0 50px;
+  }
+}
+
+
+// 生活誌首頁
+.blog_latest_grid {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  @include pad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include smallScreen {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+  }
+}
+
+.blog_latest_card_item {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog_latest_card_img {
+  width: 100%;
+  height: auto;
+  height: 220px;
+  object-fit: cover;
+  @include mobile {
+    height: 180px;
+  }
+  @include smallScreen {
+    height: 240px;
+  }
+}
+
+.blog_latest_card_content {
+  padding: 40px 20px;
+  background-color: $bg_100;
+  position: relative;
+  text-align: center;
+  height: 400px;
+  // overflow-y: scroll;
+  @include smallScreen {
+    padding: 40px 40px;
+  }
+}
+
+// 生活誌文章頁
+.blog_article_outline {
+  background: #ffffff;
+  border: 1px solid $grey_100;
+  padding: 8px;
+}
+
+.blog_article_hero {
+  width: 100%;
+  height: 500px;
+  background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3216&q=80");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include mobile {
+    height: 300px;
+  }
+}
+
+.blog_article_title_wrap {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.blog_article_grid {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 15px;
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.blog_article_grid > * {
+  grid-column: 3 / 11;
+  @include laptop {
+    grid-column: 2 / 12;
+  }
+  @include mobile {
+    grid-column: 1 / 13;
+  }
+}
+
+.block-quote {
+  grid-column: 5 / 11;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1.95;
+  padding: 30px 0;
+  font-family: 'Noto Serif TC', serif;
+  color: $text-dark;
+  @include laptop {
+    grid-column: 5 / 12;
+  }
+  @include smallScreen {
+    grid-column: 1 / 13;
+    padding: 30px 20px;
+  }
+}
+
+.blog_insert_img_left {
+  max-width: 300px;
+  float: left;
+  margin-right: 30px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  @include smallScreen {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.blog_title {
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 100;
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 1px;
+  color: $text-normal;
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.blog_title_thumb {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.blog_subtitle {
+  font-size: 14px;
+  line-height: 2;
+  color: $text_light;
+  font-family: 'Noto Serif TC', serif;
+}
+
+.blog_subhead {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 32px;
+}
+
+.icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: $text_dark;
+  mask-size: cover;
+  &:hover {
+    background: $primary;
+  }
+}
+
+.icon-instegram {
+  mask: url(../images/icon/InstagramLogo.svg)
+}
+
+.icon-facebook {
+  mask: url(../images/icon/FacebookLogo.svg)
+}
+
+.icon-pinterest {
+  mask: url(../images/icon/PinterestLogo.svg)
+}
+
+
+
+//訂閱
+.fullscreen_subscribe {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  padding-top: 100px;
+  background-color: rgba(256, 256, 256, 0.75);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.show_screen {
+  visibility: visible;
+  opacity: 1;
+}
+
+.message_container {
+  display: none;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $primary-light;
+  transition: right 0.3s;
+}
+
+.show_container {
+  display: block;
+}
