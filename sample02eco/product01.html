@@ -113,11 +113,11 @@
           </div>
           <div class="mt-5 pv_btn_wrap">
             <div class="pv_quantity_btn me-2">
-              <button class="btn-clean pv_quantity">-</button>
-              <span class="pv_quantity">1</span>
-              <button class="btn-clean pv_quantity">+</button>
+              <button class="btn-clean pv_quantity" id="minus">-</button>
+              <span class="pv_quantity" id="itemNumber">0</span>
+              <button class="btn-clean pv_quantity" id="plus">+</button>
             </div>
-            <button class="btn btn_addToBag">放入購物袋</button>
+            <button class="btn btn_addToBag" id="addToBag">放入購物袋</button>
           </div>
           <div class="pv_detail">
             <h5 class="text_sm">產品細節</h5>
@@ -457,6 +457,7 @@
   <!-- custom -->
   <script src="js/nav.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/countItems.js"></script>
 </body>
 
 </html>
