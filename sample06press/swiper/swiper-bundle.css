@@ -1,0 +1,104 @@
+/**
+ * Swiper 7.2.0
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2021 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: October 27, 2021
+ */
+
+
+:root {
+  --swiper-theme-color: #000000;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.swiper-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+.swiper-pointer-events {
+  touch-action: pan-y;
+}
+.swiper-pointer-events.swiper-vertical {
+  touch-action: pan-x;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.swiper-slide-invisible-blank {
+  visibility: hidden;
+}
+
+/* swiper btn */
+.swiper-button-prev,
+.swiper-button-next {
+  /* position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); */
+  /* z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ; */
+  color: var(--swiper-navigation-color, var(--swiper-theme-color))
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 8px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+}
+/* .swiper-button-prev {
+  left: 10px;
+  right: auto;
+} */
+/* .swiper-button-prev:after{
+  content: 'prev';
+} */
+/* .swiper-button-next{
+  right: 10px;
+  left: auto;
+} */
+/* .swiper-button-next:after{
+  content: 'next';
+} */
+.swiper-button-lock {
+  display: none;
+}
