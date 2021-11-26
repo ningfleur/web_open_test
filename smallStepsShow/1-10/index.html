@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/ad0cbcfefc.js" crossorigin="anonymous"></script>
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<!-- feather -->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Swiper CDN-->
+<link rel="stylesheet" href="swiper/swiper-bundle.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- custom -->
+<title>JS components #1-10</title>
+</head>
+<body>
+  <section id="section01">
+    <div class="bg bg_light">
+      <div class="card_container">
+        <div class="card_header">
+          <img class="userIcon" src="https://images.unsplash.com/photo-1515121240746-1fc801ba75a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80" alt="頭像">
+          <div>
+          <span class="accountName d_block">sweetlifemay</span>
+          <span class="userName d_block">Alexandra</span>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3043&q=80" alt="主圖">
+        <div class="like_card_footer">
+          <div class="snsIcons">
+          <button class="btn_clean icons" id="likeBtn"><i class="far fa-heart"></i></button>
+          </div>
+          <p class="likeNumber"><span id="likeNumber">72</span> 個讚</p>
+          <p class="updateDay">一天前</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- day 2 -->
+  <section id="section02">
+    <div class="bg bg_green">
+      <div class="tab_container">
+        <nav>
+          <ul class="tabs" id="tabs">
+            <li class="tab_current" id="tab01"><i class="far fa-comment tab_icons"></i>留言</li>
+            <li id="tab02"><i class="far fa-star tab_icons"></i>最愛</li>
+            <li id="tab03"><i class="far fa-bookmark tab_icons"></i>書籤</li>
+          </ul>
+        </nav>
+        <div class="tab_content_area" id="tab_content_area">
+          <section id="tabContent01" class="tab_content_demo d_block">
+            <p>1</p>
+          </section>
+          <section id="tabContent02" class="tab_content_demo d_none">
+            <p>2</p>
+          </section>
+          <section id="tabContent03" class="tab_content_demo d_none">
+            <p>3</p>
+          </section>
+        </div>
+    </div>
+ </section>
+  <!-- day 3 -->
+  <section id="section03">
+    <div class="accordion_container">
+      <div class="accordion_warp">
+        <div class="accordionBtn">
+          <p class="acc_question">除了公司現有的產品照片，還需要提供其他的素材嗎？</p>
+          <div class="acc_icon">
+            <div class="acc_circle"></div>
+          </div>
+        </div>
+        <div class="acc_panel">
+          <p class="acc_answer">不需要，設計師會根據網頁需求準備素材，提供相關的圖片資源。</p>
+        </div>
+        <div class="accordionBtn">
+          <p class="acc_question">會有額外的費用嗎？</p>
+          <div class="acc_icon">
+            <div class="acc_circle"></div>
+          </div>
+        </div>
+        <div class="acc_panel">
+          <p class="acc_answer">設計費用之外，如果您本身沒有網址，會需要新網址的註冊費和網域代管費用。詳細年費和月費的計算，請參考網域選擇方案。</p>
+        </div>
+        <div class="accordionBtn">
+          <p class="acc_question">可以使用原本就有的網址嗎？</p>
+          <div class="acc_icon">
+            <div class="acc_circle"></div>
+          </div>
+        </div>
+        <div class="acc_panel">
+          <p class="acc_answer">可以的。如果原本就有註冊網址，可以將新網站架設在原本的網域之上。</p>
+        </div>
+        <div class="accordionBtn">
+          <p class="acc_question">網站上線之後還有辦法修改嗎？</p>
+          <div class="acc_icon">
+            <div class="acc_circle"></div>
+          </div>
+        </div>
+        <div class="acc_panel">
+          <p class="acc_answer">可以。上線前會有詳細的使用說明，上線之後如果需要進階的技術支援，或是需要進行複雜的修改，都可以與我們聯繫。上線之後收費方式將會依照個案計算價格。</p>
+        </div>
+        <div class="accordionBtn">
+          <p class="acc_question">要如何溝通網頁設計風格？</p>
+          <div class="acc_icon">
+            <div class="acc_circle"></div>
+          </div>
+        </div>
+        <div class="acc_panel">
+          <p class="acc_answer">網站建置之前，會透過面談了解客戶的需求和商品定位。如果有喜歡的網頁風格，可以提出作為參考，如果沒有特別想法，也可以交由設計師量身打造最符合需求的網頁。</p>
+        </div>
+        <div class="accordionBtn">
+          <p class="acc_question">為什麼要選擇資料庫來建置網站？</p>
+          <div class="acc_icon">
+            <div class="acc_circle"></div>
+          </div>
+        </div>
+        <div class="acc_panel">
+          <p class="acc_answer">建置資料庫的優點，客戶可以自行修改、新增大部分的資料，無需等待排程。維護和管理更加省力。請網頁設計修改需收取部分維護費用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- day 4 -->
+  <section id="section04">
+    <div class="section04_bg">
+      <div class="cards_wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/春室+P STORE.jpeg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">春室 +P STORE</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/東厚食Cafe.jpeg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">東厚食Cafe</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/大人小學 古文具.jpeg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">大人小學 古文具</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/小隱茶庵c.jpg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">小隱茶庵</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/綠河咖啡.jpeg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">綠河咖啡</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/MKCR 山小孩咖啡.jpeg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">MKCR 山小孩咖啡</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/軟食力.jpeg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">軟食力</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card_head">
+                  <img src="img/基隆誠品.jpg" alt="">
+                </div>
+                <div class="card_body">
+                  <p class="card_title">基隆誠品</p>
+                  <p class="card_info">台灣第一間以循環設計觀點為主軸的選物店，由 W 春池計畫攜手朋丁pon ding、彡苗空間實驗共同打造。</p>
+                </div>
+                <div class="card_footer">
+                  <button class="btn_clean btn_web">web</button>
+                  <svg class="arr_linkto" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.51316 0.452261C8.24146 0.180904 7.87919 0 7.51693 0C7.15466 0 6.7924 0.180904 6.5207 0.452261C5.97731 0.994974 5.97731 1.8995 6.5207 2.44221L7.24523 3.16583H1.35679C0.607454 3.16583 0 3.77328 0 4.52261C0 5.27194 0.607453 5.87939 1.35678 5.87939H7.24523L6.5207 6.60301C5.97731 7.14573 5.97731 8.05025 6.5207 8.59296C7.0641 9.13567 7.96976 9.13567 8.51316 8.59296L11.5924 5.51759C12.1358 4.97487 12.1358 4.07035 11.5924 3.52764L8.51316 0.452261Z" fill="black"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="arr_warp">
+          <button class="btn_clean arr arr_pre"><svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.2 0C4.8 0 4.4 0.2 4.1 0.5L0.7 3.9C0.0999998 4.5 0.0999998 5.5 0.7 6.1L4.1 9.5C4.7 10.1 5.7 10.1 6.3 9.5C6.9 8.9 6.9 7.9 6.3 7.3L4 5L6.3 2.7C6.9 2.1 6.9 1.1 6.3 0.5C6 0.2 5.6 0 5.2 0Z" fill="white"/>
+            </svg></button>
+          <div class="swiper-pagination"></div>
+          <button class="btn_clean arr arr_next"><svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.55 0C1.95 0 2.35 0.2 2.65 0.5L6.05 3.9C6.65 4.5 6.65 5.5 6.05 6.1L2.65 9.5C2.05 10.1 1.05 10.1 0.45 9.5C-0.15 8.9 -0.15 7.9 0.45 7.3L2.75 5L0.45 2.7C-0.15 2.1 -0.15 1.1 0.45 0.5C0.75 0.2 1.15 0 1.55 0Z" fill="white"/>
+          </svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- day 5 -->
+  <section id="section05" class="section05_bg">
+    <div class="ct_wrapper">
+      <div class="ct_banner">
+        <div class="ct_name">Launch<span class="until">2022 New Years Day</span></div>
+        <div class="ct_countdown"> 
+          <div class="ct_numbers" id="days">80</div>
+          <span></span>
+          <div class="ct_numbers" id="hours">50</div>
+          <span>:</span>
+          <div class="ct_numbers" id="minutes">23</div>
+          <span>:</span>
+          <div class="ct_numbers" id="seconds">05</div>
+          <div class="ct_units">days</div>
+          <span></span>
+          <div class="ct_units">hh</div>
+          <span></span>
+          <div class="ct_units">mm</div>
+          <span></span>
+          <div class="ct_units">ss</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- day 6 -->
+  <section id="section06" class="section06_bg">
+    <div class="bmi_wrap">
+      <div class="form_container">
+        <div class="form_head">
+          <div>計算BMI是否在理想範圍</div>
+        </div>
+        <div class="form_align">
+          <label for="inputHeight" class="form_label">身高<span class="text_xs"> cm</span></label>
+          <input type="height" class="form_input" placeholder="cm" id="inputHeight">
+        </div>
+        <div class="form_align">
+          <label for="inputWeight" class="form_label">體重<span class="text_xs"> kg</span></label>
+          <input type="weight" class="form_input" placeholder="kg" id="inputWeight">
+        </div>
+        <button type="submit" class="btn_clean submit" id="submitBtn">計算BMI</button>
+      </div>
+      <!-- 顯示結果 -->
+      <div class="bmi_result">
+        <div class="text_mute">
+          <p class="text_md">BMI指數<span class="bmiNum" id="bmiNum"><span></p>
+          <div id="stateReport">
+            <p class="text_sm"><span id="yourState">體重狀態</span><span class="stateColor" id="stateColor"></span></p>
+          </div>
+        </div>
+      </div>
+      <!-- 錯誤訊息 -->
+      <div id="textErro">
+        <!-- <p class="text_err">您的數值輸入錯誤，請重新輸入</p> -->
+      </div>
+      <button type="submit" class="btn_clean resetBtn" id="resetBtn">清空</button>
+      <!-- 指數說明 -->
+      <div class="bmi_charts">
+        <p class="text_base">指數說明：</p>
+        <div>
+          <p class="text_sm">BMI＜18.5，體重過輕<span class="stateColor green"></span></p>
+        </div>
+        <div>
+          <p class="text_sm">18.5 ≦ BMI ＜ 24，體重正常<span class="stateColor blue"></span></p>
+        </div>
+        <div>
+          <p class="text_sm">24 ≦ BMI ＜ 27，體重過重<span class="stateColor yellow"></span></p>
+        </div>
+        <div>
+          <p class="text_sm">27 ≦BMI ＜ 30，輕度肥胖<span class="stateColor orange"></span></p>
+        </div>
+        <div>
+          <p class="text_sm">30 ≦ BMI ＜ 35，中度肥胖<span class="stateColor red"></span></p>
+        </div>
+        <div>
+          <p class="text_sm">BMI ≧ 35，重度肥胖<span class="stateColor purple"></span></p>
+        </div>
+      </div>
+    </div>      
+  </section>
+  <!-- day 7 -->
+  <section id="section07" class="section07_bg">
+    <div class="lm_wrap">
+      <div class="lmCard d_none">
+        <img src="img/七股鹽山.jpg" alt="">
+        <p class="lmCardTitle">七股鹽山</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>七股區</span>
+          <ul class="d_flex">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="img/四草綠色隧道.jpg" alt="四草綠色隧道">
+        <p class="lmCardTitle">四草綠色隧道</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>安南區</span>
+          <ul class="d_flex">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/14178/1024x768" alt="草山月世界">
+        <p class="lmCardTitle">草山月世界</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>左鎮區</span>
+          <ul class="d_flex">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/72467/1024x768" alt="曾文溪口濕地">
+        <p class="lmCardTitle">曾文溪口濕地</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>七股區</span>
+          <ul class="d_flex">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/33108/1024x768" alt="井仔腳瓦盤鹽田">
+        <p class="lmCardTitle">井仔腳瓦盤鹽田</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>北區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/12757/1024x768" alt="安平樹屋">
+        <p class="lmCardTitle">安平樹屋</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>安平區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/73795/1024x768" alt="國立臺灣史前文化博物館南科考古館">
+        <p class="lmCardTitle">國立臺灣史前文化博物館南科考古館</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>新市區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/17265/1024x768" alt="夕遊出張所">
+        <p class="lmCardTitle">夕遊出張所</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>安平區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/73868/1024x768" alt="台南市美術館2館">
+        <p class="lmCardTitle">台南市美術館2館</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>西區</span>
+          <ul class="d_flex">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/17821/1024x768" alt="原英商德記洋行">
+        <p class="lmCardTitle">原英商德記洋行</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>安平區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://www.twtainan.net/image/83683/1024x768" alt="知事官邸生活館">
+        <p class="lmCardTitle">知事官邸生活館</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>東區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lmCard d_none">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/%E5%8E%9F%E5%8F%B0%E5%8D%97%E5%B7%9E%E5%BB%B3%28%E5%8F%B0%E7%81%A3%E6%96%87%E5%AD%B8%E9%A4%A8%29.jpg/2560px-%E5%8E%9F%E5%8F%B0%E5%8D%97%E5%B7%9E%E5%BB%B3%28%E5%8F%B0%E7%81%A3%E6%96%87%E5%AD%B8%E9%A4%A8%29.jpg" alt="台灣文學館">
+        <p class="lmCardTitle">台灣文學館</p>
+        <div class="lm_card_footer">
+          <span class="lm_area"><i class="fas fa-map-marker-alt lm_icons"></i>西區</span>
+          <ul class="d_flex" id="ranking">
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="fas fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+            <li><i class="far fa-star lm_icons"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lm_btn">
+      <button class="btn_clean lmBtn" id="lmBtn">看更多</button>
+    </div>
+  </section>
+  <!-- day 8 -->
+  <section id="section08" class="section08_bg">
+    <div class="countItem_container">
+      <div class="cart_circle">
+        <div class="cartNum cartHide" id="cartNum">8</div>
+        <i data-feather="shopping-bag" class="icon_bag"></i>
+      </div>
+      <div class="countItem_wrap">
+        <div>
+          <img class="item_img" src="https://images-na.ssl-images-amazon.com/images/I/41eyq-C0LNL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg" alt="Dune">
+          <h4 class="item_title">沙丘 Dune</h4>
+          <p class="item_author">法蘭克·赫伯特</p>
+        </div>
+        <div class="item_footer">
+          <div class="btnGroup">
+            <div class="quantityGroup">
+              <button id="minus" class="btn_clean quantityBtn">-</button>
+              <div class="quantityCount" id="quantity">0</div>
+              <button id="plus" class="btn_clean quantityBtn">+</button>
+            </div>
+            <button id="addToBag" class="btn_clean addToBagBtn">購買</button>
+          </div> 
+          <p class="remindTxt d_none">每人限量10件</p>
+          <p class="emptyTxt" id="emptyBag">清空購物袋</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- day 9 -->
+  <section id="section09" class="section09_bg">
+    <div class="cal_frame">
+      <div class="cal_top"><p>Events</p></div>
+      <div class="cal_main">
+        <div class="cal_left"><p>2021</p></div>
+        <div class="cal_right">
+          <div class="cal_container">
+          </div>
+        </div>
+      </div>
+      <div class="cal_bottom"></div>
+    </div>
+  </section>
+  <!-- day 10 -->
+  <section class="section10_bg">
+    <div class="todo_wrap">
+      <h2 class="todo_title">To-do List</h2>
+      <p class="todo_subtitle">Mia's Shopping List<span id="showNum" class="showNum">0</span></p>
+      <div class="input_area" >
+        <input type="text" class="input_clean todo_input" value="" id="inputValue">
+        <button type="submit" class="btn_clean todo_submit" id="todoInput"><i data-feather="plus" class="todo_plus"></i></button>
+      </div>
+      <ul class="list_area" id="listArea">
+      </ul>
+      <ul class="tab_area" id="tabArea">
+        <li class="active" data-state="toBeDone">待辦</li>
+        <li data-state="done">已完成</li>
+        <li data-state="all">全部</li>
+      </ul>
+    </div>
+  </section>
+  <!-- Initialize Swiper -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="module">
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+      loop: false,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.arr_next',
+        prevEl: '.arr_pre',
+        disabledClass: 'arr_disabled',
+      },
+      breakpoints: {
+          411: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+            slidesPerGroup: 2,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            slidesPerGroup: 3,
+          },
+          997: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            slidesPerGroup: 4,
+          },
+        },
+    });
+  </script>
+  <script>
+    feather.replace()
+  </script>
+ <!-- custom js -->
+ <script src="js/all.js"></script>
+ <script src="js/accordion.js"></script>
+ <script src ="js/countdown.js"></script>
+ <script src="js/bmi.js"></script>
+ <script src="js/loadmore.js"></script>
+ <script src="js/countItems.js"></script>
+ <script src="js/templateLiteral.js"></script>
+ <script src = "js/todolist.js"></script>
+</body>
+</html>
