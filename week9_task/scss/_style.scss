@@ -1,0 +1,892 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//global setting
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition: all 0.2s;
+ }
+ 
+body {
+  font-family: 'Montserrat', "Noto Sans TC","微軟正黑體", "Microsoft JhengHei", "PingFang",sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html, body {
+  line-height: 1.5;
+}
+
+//site components
+input, 
+select {
+  border: 1px solid #CED4DA;
+  border-radius: 2px;
+  &:focus-visible {
+    border: 1px solid transparent;
+    outline: 1px solid #6A33FF;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+//site styles
+.text_xl {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.text_lg {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text_md {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.text_base {
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.text_sm {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.text_xs {
+ font-size: 10px;
+ font-weight: 400;
+ line-height: 1.25;
+}
+
+.bg_grey {
+  background-color: #F8F8F8;
+}
+
+.bg_primary {
+  background-color: #301E5F;
+}
+
+//選單
+.header_wrap {
+  width: 100%;
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.top_menu_bar {
+  position: relative;
+  @include laptop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include pad {
+    height: 72px;
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-family: 'Geeza Pro', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 1002;
+  @include laptop {
+    left: 15px;
+  }
+  a {
+    display: inline-block;
+  }
+}
+
+.menuOpenBtn {
+  position: absolute;
+  width: 32px;
+  height: 22px;
+  top: 24px;
+  right: 0;
+  z-index: 1002;
+  cursor: pointer;
+  display: none;
+  @include laptop {
+    right: 15px;
+  }
+  @include pad {
+    display: block;
+  }
+}
+
+.menuOpenBtn span {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+span.bar1 {
+  top: 0;
+  left: 0;
+}
+
+span.bar2 {
+  top: 50%;
+  left: 0;
+}
+
+span.bar3 {
+  top: 100%;
+  left: 0;
+}
+
+.menuOpenBtn.active {
+  span.bar1 {
+    transform: rotate(-45deg) translateX(-4px) translateY(11px);
+  }
+  span.bar2 {
+    opacity: 0;
+  }
+  span.bar3 {
+    transform: rotate(45deg) translateX(-4px) translateY(-11px);
+  }
+}
+
+.navbarMenu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+  background-color: #ffffff;
+  transition: all 0.4s ease-in-out;
+  @include pad {
+    flex-direction: column;
+    justify-content: center;  
+    position: absolute;
+    left: 0;
+    top: -500px;
+    min-height: 500px;
+    opacity: 0;
+  }
+}
+
+.navbarMenu.show {
+  top: 0;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 24px 24px;
+  &:nth-last-of-type(1) {
+    padding-right: 0;
+  }
+  &:hover {
+    color: #6A33FF;
+  }
+  @include pad {
+    display: block;
+    padding: 24px 0;
+    text-align: center;
+  }
+}
+
+.decoBar {
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+  z-index: 1;
+}
+
+//主圖
+.banner {
+  width: 100%;
+  height: 420px;
+  background-color: #dedede;
+  margin-top: 30px;
+  position: relative;
+  background-image: url("https://github.com/hexschool/js-training/blob/main/%E7%AC%AC%E4%B9%9D%E9%80%B1%E4%B8%BB%E7%B7%9A%E4%BB%BB%E5%8B%99%E5%9C%96%E5%BA%AB/3ewLAKn.png?raw=true");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+  z-index: -1;
+}
+
+.title {
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 400px;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  span {
+    display: block;
+  }
+}
+
+//床墊優勢
+.features_wrap {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.features {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  @include pad {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.features li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 30px;
+  &:nth-last-of-type(1) {
+    padding-right: 0;
+  }
+  @include pad {
+    padding-right: 0;
+    margin-top: 20px;
+    &:nth-first-of-type(1) {
+      margin-top: 0;
+    }
+  }
+}
+
+//家具比較
+.comparison_wrap {
+  width: 100%;
+  max-width: 660px;
+  margin-right: auto;
+  margin-left: auto;
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.compare_table {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #B9B9B9;
+  td {
+    padding: 12px 2px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.compare_table th, 
+.compare_table tr {
+  border-bottom: 1px solid #B9B9B9;
+}
+
+.compare_table thead td{
+  font-size: 18px;
+  color: #797979;
+  &:nth-of-type(1) {
+    color: #000000;
+  }
+  @include mobile {
+    font-size: 14px;
+    & span {
+      display: block;
+    }
+  }
+}
+
+.compare_table tbody td {
+  &:nth-child(1) {
+    color: #000000;
+    font-size: 18px;
+    text-align: left;
+    width: 140px;
+  }
+  @include mobile {
+    &:nth-child(1) {
+      font-size: 14px;
+      width: 110px;
+    }
+  }
+}
+
+.check {
+  color: #6A33FF;
+  display: inline-block;
+}
+
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.f_fill {
+  fill: currentColor;
+}
+
+.f_sm {
+  width: 20px;
+  height: 20px;
+}
+
+.f_lg {
+  width: 36px;
+  height: 36px;
+}
+
+//好評推薦
+.recommend_wrap {
+  width: 100%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  overflow-x: scroll;
+  // cursor: grab;
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.cards_row {
+  display: flex;
+  margin-top: 20px;
+  &:nth-of-type(1){
+    margin-left: 96px;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  height: 96px;
+  width: 350px;
+  min-width: 350px;
+  display: flex;
+  margin-left: 30px;
+  &:nth-child(1){
+    margin-left: 0;
+  }
+}
+
+.card_img {
+  width: 96px;
+  user-select: none;
+}
+
+.card_body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rec_head {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.rec_name {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-left: 8px;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #6A33FF;
+  }
+}
+
+//運送方式
+.steps_wrap {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.steps_group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 30px;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.steps_group li {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  span {
+    display: block;
+  }
+  .eng {
+    font-weight: 300;
+    margin-top: 10px;
+    color: #6A33FF;
+  }
+  &:nth-of-type(even){
+    width: 30px;
+  }
+  @include mobile {
+    margin-bottom: 20px;
+    &:nth-of-type(even){
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.step_img {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.material-icons {
+  font-size: 32px;
+  line-height: inherit;
+}
+
+.material-icons_s {
+  font-size: 20px;
+}
+
+//產品
+.products_wrap {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.productSelect {
+  height: 38px;
+  width: 23%;
+  @include pad {
+    width: 30%;
+  }
+  @include mobile {
+    width: 48%;
+  }
+  @include smallScreen {
+    width: 100%;
+  }
+}
+
+.productGroup {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.product {
+  position: relative;
+  width: 23%;
+  margin-bottom: 30px;
+  margin-right: 2%;
+  @include pad {
+    width: 30%;
+    margin-right: 3%;
+  }
+  @include mobile {
+    width: 48%;
+    margin-right: 2%;
+  }
+  @include smallScreen {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.newTag {
+  font-size: 18px;
+  padding: 8px 24px;
+  color: #ffffff;
+  background-color: #000000;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+}
+
+.p_img {
+  width: 100%;
+  min-height: 310px;
+}
+
+.btnAddCart {
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #301E5F;
+  }
+}
+
+.p_name {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+del {
+  font-size: 16px;
+  line-height: 1;
+  color: #797979;
+}
+
+.p_price {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+//我的購物車
+.shopping_wrap {
+  max-width: 920px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x: scroll;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.shoppingCartTable {
+  width: 100%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  @include mobile {
+    width: 600px;
+  }
+  @include smallScreen {
+    width: 500px;
+  }
+}
+
+.shoppingCartTable td {
+  vertical-align: middle;
+  padding: 8px 0;
+}
+
+.shoppingCartTable tbody tr {
+  border-bottom: 1px solid #B9B9B9;
+}
+
+.shoppingCartTable tr td {
+  &:nth-of-type(3) {
+    text-align: center;
+    padding: 8px 20px;
+  }
+  @include mobile {
+    padding: 8px 2px;
+  }
+}
+
+.shoppingCartTable tbody tr td {
+  height: 96px;
+  &:nth-of-type(2){
+    font-size: 12px;
+  }
+  &:nth-of-type(4){
+    font-size: 12px;
+  }
+  @include mobile {
+    .itemImg {
+      display: none;
+    }
+  }
+}
+
+img.itemImg {
+  width: 80px;
+  height: 80px;
+}
+
+.itemPrice {
+  font-size: 20px;
+}
+
+.item_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.itemName {
+  margin-left: 10px;
+  @include mobile {
+    margin-left: 0;
+  }
+}
+
+.deleteBtn {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  &:hover {
+    .material-icons_s {
+      color: #6A33FF;
+      transform: scale(1.25);
+    }
+  }
+}
+
+.table_footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  @include mobile {
+    flex-direction: column-reverse;
+    justify-content: center; 
+    align-items: center;
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}
+
+.btnDeleteAll {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 20px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  &:hover{
+    color: #ffffff;
+    background-color: #000000;
+  }
+  @include mobile {
+    padding: 6px 12px;
+    margin-top: 30px;
+  }
+}
+
+.cartTotal {
+  font-size: 28px;
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+//填寫預訂資料
+.form_group {
+  margin-bottom: 20px;
+  @include mobile {
+    margin-bottom: 36px;
+  }
+}
+
+.form_wrap {
+  margin-top: 30px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.form_input_group {
+  position: relative;
+  margin-top: 6px;
+}
+
+.form_wrap {
+  input, select {
+    width: 100%;
+    height: 40px;
+  }
+  &::placeholder {
+    color: #818A91;
+  }
+}
+
+.alertMessage {
+  font-size: 12px;
+  color: #6A33FF;
+  margin-left: 8px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  transform: translateY(50%);
+  left: 350px;
+  // display: none;
+  @include mobile {
+    margin-left: 0px;
+    transform: translateY(250%);
+    left: 0;
+  }
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  color: #ffffff;
+  background-color: #000000;
+  border: 0px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  width: 50%;
+  transform: translateX(50%);
+  &:hover{
+    background-color: #301E5F;
+  }
+}
+
+//後台訂單
+.orders_wrap {
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+  @include pad {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.flex_end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.table_wrap {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.ordersTable {
+  min-width: 1000px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.thead {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.tr {
+  display: grid;
+  grid-template-columns: 20% 10% 10% 20% 20% 8% 7% minmax(50px, 5%);
+  border-bottom: 1px solid #797979;
+  .td {
+    &:nth-last-child(1) {
+      text-align: center;
+      cursor: pointer;
+    };
+    &:nth-last-child(2) {
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.td {
+  padding: 15px 5px;
+  // border: 1px solid pink;
+}
+
+.orderDeleteItem a {
+  padding: 2px 6px;
+  color: white;
+  background-color: #C44021;
+  cursor: pointer;
+}
