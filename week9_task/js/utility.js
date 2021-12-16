@@ -1,15 +1,19 @@
 function validateEmail(email) {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
     return true
+  }else if(email === ""){
+    return undefined;
   }else{
-   return false
+   return false;
   }
 }
 
 function validatePhone(phone){
 	if(/^[09]{2}\d{8}$/.test(phone)){
 		return true;
-	}else{
+	}else if(phone === ""){
+    return undefined;
+  }else{
 		return false;	
 	}
 }

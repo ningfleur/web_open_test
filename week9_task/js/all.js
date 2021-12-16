@@ -172,6 +172,25 @@ const inputAdd = document.querySelector("#inputAdd");
 const tradeType = document.querySelector("#tradeType");
 // console.log(inputName, inputPhone, inputMail, inputAdd, tradeType)
 
+
+function validateForms(){
+    formGroup.forEach((item) => {
+        if(item.value === ""){
+            item.nextElementSibling.innerHTML = `<span>必填</span>`;
+        }else{
+            item.nextElementSibling.innerHTML = "";
+        };
+    });
+    if(validateEmail(inputMail.value) === false){
+        inputMail.nextElementSibling.innerHTML = `<span>email格式不正確</span>`;
+    }else if(validateEmail(inputMail.value) === undefined){
+        inputMail.nextElementSibling.innerHTML = `<span>必填</span>`;
+    };
+    if(validatePhone(inputPhone.value) === false){
+        inputPhone.nextElementSibling.innerHTML = `<span>手機號碼不正確</span>`;
+    };
+}
+
 //送出預定資料
 formSubmit.addEventListener("click", checkOrder);
 function checkOrder(e){
@@ -180,44 +199,31 @@ function checkOrder(e){
         alert("請先加入購物車");
         return;
     };
-
-    if(validateEmail(inputMail.value) === false){
-        alert("請填入正確的email");
-        return;
-    }else if(validatePhone(inputPhone.value) === false){
-        alert("請填入正確的手機號碼");
-        return;
-    }else{
-        formGroup.forEach((item) => {
-            if(item.value === ""){
-                item.nextElementSibling.classList.remove("d_none");
-            }else{
-                item.nextElementSibling.classList.add("d_none");
+    validateForms();
+    if(inputName.value !== "" && inputPhone.value !== "" && inputMail.value !== "" && inputAdd.value !== "" && validateEmail(inputMail.value) === true && validatePhone(inputPhone.value) === true){
+        let url = `https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/orders`;
+        let obj = {
+            "data": {
+                "user": {
+                    "name": inputName.value,
+                    "tel": inputPhone.value,
+                    "email": inputMail.value,
+                    "address": inputAdd.value,
+                    "payment": tradeType.value
+                }
             }
+        };
+        axios.post(url, obj)
+        .then(function(response){
+            console.log(response); 
+            alert("訂單送出！");
+            updateOrderList()
+            resetOrderForms();
+        })
+        .catch(function(error){
+            console.log(error); 
         });
-    };
-    let url = `https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/orders`;
-    let obj = {
-        "data": {
-            "user": {
-                "name": inputName.value,
-                "tel": inputPhone.value,
-                "email": inputMail.value,
-                "address": inputAdd.value,
-                "payment": tradeType.value
-            }
-        }
-    };
-    axios.post(url, obj)
-    .then(function(response){
-        console.log(response); 
-        alert("訂單送出！");
-        updateOrderList()
-        resetOrderForms();
-    })
-    .catch(function(error){
-        console.log(error); 
-    });
+    }
 }
 
 //表單清空
