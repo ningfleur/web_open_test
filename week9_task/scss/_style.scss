@@ -626,10 +626,9 @@ span.bar3 {
 }
 
 .p_name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 8px;
-  white-space: nowrap;
 }
 
 del {
@@ -769,6 +768,23 @@ img.itemImg {
     font-size: 24px;
   }
 }
+
+.numGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.quantity {
+  border: 1px solid #CED4DA;
+  padding: 1px 18px;
+}
+
 
 //填寫預訂資料
 .form_group {

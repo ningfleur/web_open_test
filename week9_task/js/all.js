@@ -71,6 +71,7 @@ const cartTotal = document.querySelector(".cartTotal");
 function renderCart(){
     let str = "";
     let sum = 0;
+    let quantity;
     orderData.forEach((item) => {
         let subtotal = item.product.price * item.quantity;
         str += `<tr>
@@ -79,7 +80,13 @@ function renderCart(){
           <span class="itemName">${item.product.title}</span>
         </td>
         <td>NT$<span class="itemPrice">${item.product.price}</span></td>
-        <td>${item.quantity}</td>
+        <td>
+        <div class="numGroup">
+            <span class="material-icons material-icons_s icons" data-type="js_PatchMinus" data-id="${item.id}" data-num="${item.quantity}">remove</span>
+            <span class="quantity">${item.quantity}</span>
+            <span class="material-icons material-icons_s icons" data-type="js_PatchAdd" data-id="${item.id}" data-num="${item.quantity}">add</span>
+        </div>
+        </td>
         <td>NT$<span class="itemPrice">${subtotal}</span></td>
         <td>
           <a class="deleteBtn"><span class="material-icons material-icons_s" data-type="deleteOrder" data-id="${item.id}">clear</span></a>
@@ -91,7 +98,46 @@ function renderCart(){
     cartTotal.textContent = sum;  //購物車總金額
 }
 
-//新增資料到購物車
+//調整商品數量
+cartContent.addEventListener("click", function(e){
+    e.preventDefault();
+    let productID = e.target.getAttribute("data-id");
+    let productQuantity = parseInt(e.target.getAttribute("data-num"));
+    let patchQuantity = 0;
+    if(e.target.getAttribute("data-type") === "js_PatchAdd"){
+        patchQuantity = productQuantity + 1;
+        patchOrder(productID, patchQuantity);
+    }else if(e.target.getAttribute("data-type") === "js_PatchMinus"){
+        if(productQuantity === 1){
+            return;
+        };
+        patchQuantity = productQuantity - 1;
+        patchOrder(productID, patchQuantity);
+    }else{
+        return;
+    };
+});
+
+//PATCH商品數量
+function patchOrder(productID, patchQuantity){
+    let url = `https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/carts`;
+    let data = {
+        "data": {
+          "id": productID,
+          "quantity": patchQuantity
+        }
+      };
+    axios.patch(url, data, config)
+    .then(function(response){
+        console.log(response); 
+        updateOrderList();
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+}
+
+//新增商品到購物車
 productGroup.addEventListener("click", addToCart);
 function addToCart(e){
     if(e.target.getAttribute("data-type") !== "addBtn"){
@@ -105,7 +151,7 @@ function addToCart(e){
                 productQuantity += item.quantity;
             };
         });
-        console.log(productID, productQuantity);
+        // console.log(productID, productQuantity);
         let url = `https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/carts`;
         let obj = {
             "data": {

@@ -875,10 +875,9 @@ span.bar3 {
 }
 
 .p_name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 8px;
-  white-space: nowrap;
 }
 
 del {
@@ -1056,6 +1055,28 @@ img.itemImg {
   .cartTotal {
     font-size: 24px;
   }
+}
+
+.numGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icons {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.quantity {
+  border: 1px solid #CED4DA;
+  padding: 1px 18px;
 }
 
 .form_group {
