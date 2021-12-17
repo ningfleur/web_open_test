@@ -129,7 +129,6 @@ cartContent.addEventListener("click", deleteOneOrder);
 function deleteOneOrder(e){
     e.preventDefault();
     if(e.target.getAttribute("data-type") !== "deleteOrder"){
-        console.log("nothing");
         return;
     }else{
         let orderID = e.target.getAttribute("data-id");
@@ -205,11 +204,11 @@ function checkOrder(e){
         let obj = {
             "data": {
                 "user": {
-                    "name": inputName.value,
-                    "tel": inputPhone.value,
-                    "email": inputMail.value,
-                    "address": inputAdd.value,
-                    "payment": tradeType.value
+                    "name": inputName.value.trim(),
+                    "tel": inputPhone.value.trim(),
+                    "email": inputMail.value.trim(),
+                    "address": inputAdd.value.trim(),
+                    "payment": tradeType.value.trim()
                 }
             }
         };

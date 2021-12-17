@@ -93,6 +93,10 @@
   margin-bottom: 24px;
 }
 
+.mb-5 {
+  margin-bottom: 48px;
+}
+
 .py-5 {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -762,6 +766,12 @@ span.bar3 {
 
 .material-icons_s {
   font-size: 20px;
+}
+
+.loader {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .products_wrap {
