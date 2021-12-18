@@ -233,7 +233,9 @@ function validateForms(){
     };
     if(validatePhone(inputPhone.value) === false){
         inputPhone.nextElementSibling.innerHTML = `<span>手機號碼不正確</span>`;
-    };
+    }else if(validatePhone(inputPhone.value) === undefined){
+        inputPhone.nextElementSibling.innerHTML = `<span>必填</span>`;
+    };;
 }
 
 //送出預定資料
