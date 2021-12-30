@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- google fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/all.css">
+ <title>small steps show 14</title>
+</head>
+<body>
+  <section class="day14">
+    <h1 class="text_2xl">slideshow gallery</h1>
+    <div class="slidshow_wrap">
+      <h2 class="text_xl">slideshow gallery with jQuery</h2>
+      <div class="slideWindow">
+        <a class="prev" onclick="plusSlides(-1)"><img src="img/chevon-left_white_shadow.svg"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="img/chevon-right_white_shadow.svg"></a>
+        <div class="slide"><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/10-hannah-busing-mK9az4rr1-I-unsplash.jpg"></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/9-natalia-ventskovskaya-xvKg3qsZBp8-unsplash.jpg"></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/8-jenny-pace-WERfZVEnPfA-unsplash.jpg"></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/3-alyssa-strohmann-Af3GEg0DMEw-unsplash.jpg"></div>
+      </div>
+      <div class="row">
+        <div class="thumb cursor" onclick="currentSlide(1)" alt="slide 1">
+          <img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/10-hannah-busing-mK9az4rr1-I-unsplash.jpg">
+        </div>
+        <div class="thumb cursor" onclick="currentSlide(2)" alt="slide 2">
+          <img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/9-natalia-ventskovskaya-xvKg3qsZBp8-unsplash.jpg">
+        </div>
+        <div class="thumb cursor" onclick="currentSlide(3)" alt="slide 3">
+          <img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/8-jenny-pace-WERfZVEnPfA-unsplash.jpg">
+        </div>
+        <div class="thumb cursor" onclick="currentSlide(4)" alt="slide 4">
+          <img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/3-alyssa-strohmann-Af3GEg0DMEw-unsplash.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="day14 s_full_height">
+    <div class="slidshow_wrap">
+      <h2 class="text_xl">slideshow gallery with JavaScript</h2>
+      <div class="js_slideWindow">
+        <a class="js_prev"><img src="img/chevon-left_white_shadow.svg"></a>
+        <a class="js_next"><img src="img/chevon-right_white_shadow.svg"></a>
+        <div class="js_slide" data-num="1" ><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/10-hannah-busing-mK9az4rr1-I-unsplash.jpg"></div>
+        <div class="js_slide" data-num="2" ><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/9-natalia-ventskovskaya-xvKg3qsZBp8-unsplash.jpg"></div>
+        <div class="js_slide" data-num="3" ><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/8-jenny-pace-WERfZVEnPfA-unsplash.jpg"></div>
+        <div class="js_slide" data-num="4" ><img src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/3-alyssa-strohmann-Af3GEg0DMEw-unsplash.jpg"></div>
+      </div>
+      <div class="js_row">
+        <div class="js_thumb cursor" alt="slide 1">
+          <img data-id="1" src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/10-hannah-busing-mK9az4rr1-I-unsplash.jpg">
+        </div>
+        <div class="js_thumb cursor" alt="slide 2">
+          <img data-id="2" src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/9-natalia-ventskovskaya-xvKg3qsZBp8-unsplash.jpg">
+        </div>
+        <div class="js_thumb cursor" alt="slide 3">
+          <img data-id="3" src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/8-jenny-pace-WERfZVEnPfA-unsplash.jpg">
+        </div>
+        <div class="js_thumb cursor" alt="slide 4">
+          <img data-id="4" src="https://raw.githubusercontent.com/ningfleur/web_open_test/main/sample02eco/images/instegram/3-alyssa-strohmann-Af3GEg0DMEw-unsplash.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <nav class="fixed_menu_left">
+    <div>show more</div>
+    <ul class="rounded_menu">
+      <li><a href="index.html">11</a></li>
+      <li><a href="scroll_navigation.html">12</a></li>
+      <li><a href="lightbox2.html">13</a></li>
+      <li class="active"><a href="slideshow_gallery.html">14</a></li>
+      <li><a href="autoplay_slides.html">15</a></li>
+    </ul>
+  </nav>
+  <footer>
+    <p class="h6">slideshow gallery</p>
+  </footer>
+<script src="js/slideGallery_jQuery.js"></script>
+<script src="js/slideGallery_js.js"></script>
+</body>
+</html>
