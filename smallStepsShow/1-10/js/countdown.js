@@ -1,4 +1,4 @@
-const countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
+const countDownDate = new Date("Jan 1, 2023 00:00:00").getTime();
 const showDays = document.querySelector("#days");
 const showHours = document.querySelector("#hours");
 const showMinutes = document.querySelector("#minutes");
